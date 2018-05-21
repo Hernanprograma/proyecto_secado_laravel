@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Centrifuga;
 use Illuminate\Http\Request;
+use Auth;
 
 class CentrifugaController extends Controller
 {
@@ -14,7 +15,7 @@ class CentrifugaController extends Controller
      */
     public function index()
     {
-        $centrifugas=Centrifuga::paginate();
+        $centrifugas=Centrifuga::orderBy('fecha', 'desc')->orderBy('hora', 'desc')->paginate(10);
         return view('centrifugas.index', compact('centrifugas'));
     }
 
@@ -36,9 +37,13 @@ class CentrifugaController extends Controller
      */
     public function store(Request $request)
     {
-        $centrifuga=Centrifuga::create($request->all());
+        $centrifuga=new Centrifuga($request->all());
+        $centrifuga->user_id = Auth::user()->id;
+        $centrifuga->save();
 
-        return redirect()->route('centrifugas.edit', $centrifuga->id)
+
+
+        return redirect()->route('centrifugas.index', $centrifuga->id)
         ->with('info', 'Datos guardados con éxito');
     }
 
@@ -74,7 +79,7 @@ class CentrifugaController extends Controller
     public function update(Request $request, Centrifuga $centrifuga)
     {
         $centrifuga->update($request->all());
-        return redirect()->route('centrifugas.edit', $centrifuga->id)
+        return redirect()->route('centrifugas.index', $centrifuga->id)
         ->with('info', 'Campos editados con éxito');
     }
 

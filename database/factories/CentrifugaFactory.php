@@ -21,7 +21,7 @@ $factory->define(App\Centrifuga::class, function (Faker $faker) {
       'caudal_poli'=>$faker->numberBetween(2000, 4000),
       'aspecto'=>'bien',
       'fecha'=>$faker->dateTimeThisYear($max = 'now', $timezone = 'Europe/Paris', $format = 'd-m-Y'),
-      'hora'=>$faker->time($format = 'H:i:s', $max = 'now', $timezone = 'Europe/Paris') ,
+      'hora'=>$faker->time($format = 'H:i', $max = 'now', $timezone = 'Europe/Paris') ,
 
       'user_id'=>App\User::all()->random()->id,
     ];

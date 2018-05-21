@@ -11,6 +11,6 @@ class CentrifugasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Centrifuga::class, 40)->create();
+        factory(App\Centrifuga::class, 10)->create();
     }
 }
