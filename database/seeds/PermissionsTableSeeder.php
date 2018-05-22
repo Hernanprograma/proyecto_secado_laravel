@@ -38,15 +38,15 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
       'name' =>'Navegar roles',
       'slug' =>'roles.index',
-      'description' =>'Lista y navega todos los roles del sistema',
+      'description' =>' Ver la ista y navega todos los roles del sistema',
     ]);
         Permission::create([
-      'name' =>'Ver detalle del roles',
+      'name' =>'Ver detalle de los roles',
       'slug' =>'roles.show',
       'description' =>'Ver en detalle cada roles del sistema',
     ]);
         Permission::create([
-      'name' =>'Edicion de roles',
+      'name' =>'Edicion de los roles',
       'slug' =>'roles.edit',
       'description' =>'Editar cualquier dato de roles del sistema',
     ]);
@@ -63,17 +63,17 @@ class PermissionsTableSeeder extends Seeder
 
         //Poli_marcas
         Permission::create([
-      'name' =>'Navegar marcas de poli',
+      'name' =>'Ver lista marcas de poli',
       'slug' =>'poli_marcas.index',
       'description' =>'Lista y navega todas los marcas de poli del sistema',
     ]);
         Permission::create([
-      'name' =>'Ver detalle del marcas de poli',
+      'name' =>'Ver detalle de las marcas de poli',
       'slug' =>'poli_marcas.show',
       'description' =>'Ver en detalle cada una de marcas de poli del sistema',
     ]);
         Permission::create([
-      'name' =>'Edicion de marcas de poli',
+      'name' =>'Editar las marcas de poli',
       'slug' =>'poli_marcas.edit',
       'description' =>'Editar cualquier dato de marcas de poli del sistema',
     ]);
@@ -90,7 +90,7 @@ class PermissionsTableSeeder extends Seeder
 
         //Centrífugas
         Permission::create([
-      'name' =>'Navegar lista de datos Centrifugas',
+      'name' =>'Ver lista de datos Centrifugas',
       'slug' =>'centrifugas.index',
       'description' =>'Lista y navega todos los datos de centrifugas',
     ]);
@@ -107,12 +107,39 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
       'name' =>'Creacion de datos de Centrifugas',
       'slug' =>'centrifugas.create',
-      'description' =>'Crea un rol en el sistema',
+      'description' =>'Crea datos de centrifuga en el sistema',
     ]);
         Permission::create([
       'name' =>'Eliminar datos de Centrifugas',
       'slug' =>'centrifugas.destroy',
       'description' =>'Eliminar cualquier dato de una centífuga',
+    ]);
+
+        //Permisos
+        Permission::create([
+    'name' =>'Navegar lista de datos Permisoss',
+    'slug' =>'permisos.index',
+    'description' =>'Lista y navega todos los datos de permisos',
+    ]);
+        Permission::create([
+    'name' =>'Ver detalle de datos de Permisoss',
+    'slug' =>'permisos.show',
+    'description' =>'Ver en detalle los datos de los permisos del sistema',
+    ]);
+        Permission::create([
+    'name' =>'Edicion de datos de Permisoss',
+    'slug' =>'permisos.edit',
+    'description' =>'Editar cualquier dato de datos permisos del sistema',
+    ]);
+        Permission::create([
+    'name' =>'Creacion de datos de Permisoss',
+    'slug' =>'permisos.create',
+    'description' =>'Crea permisos en el sistema',
+    ]);
+        Permission::create([
+    'name' =>'Eliminar permisos',
+    'slug' =>'permisos.destroy',
+    'description' =>'Eliminar cualquier permiso',
     ]);
     }
 }

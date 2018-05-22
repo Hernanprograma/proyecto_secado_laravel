@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Marcas de Polielectrolito</h4>
+                      <h4 class="card-title">Polielectrolito</h4>
                       <p class="category">Agregar marca de polielectrolito</p>
                     </div>
                     <div class="card-content">

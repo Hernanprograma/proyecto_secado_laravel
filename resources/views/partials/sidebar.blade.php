@@ -31,11 +31,11 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
-      @can ('users.index')
+      @can ('permisos.index')
       <li id="nav-inver">
-        <a href="{{route('users.index')}}">
+        <a href="{{route('permisos.index')}}">
               <i class="ti-harddrive"></i>
-              <p>Usuarios</p>
+              <p>Permisos</p>
             </a>
       </li>
       @endcan

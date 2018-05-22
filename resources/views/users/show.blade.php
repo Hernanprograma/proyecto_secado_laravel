@@ -1,4 +1,5 @@
-{{-- @extends('layouts.app')
+{{--
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -46,12 +47,12 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Centífugas</h4>
-                      <p class="category">Detalles de muestra de la centrífuga</p>
+                      <h4 class="card-title">Usuario</h4>
+                      <p class="category">Detalles del usuario</p>
                     </div>
                     <div class="card-content">
 
-                        <table  class="table table-striped table-hover">
+                      <table class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="20px">Dato</th>
@@ -62,13 +63,35 @@
                         <tbody>
 
                           <tr>
-                            <tr><td><strong>ID</strong></td><td>{{$user->id}} </td></tr>
-                            <tr><td><strong>Nombre </strong></td><td>{{$user->name}} </td></tr>
-                            <tr><td><strong>Email </strong></td><td>{{$user->email}} </td></tr>
+                            <tr>
+                              <td><strong>ID</strong></td>
+                              <td>{{$user->id}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Nombre </strong></td>
+                              <td>{{$user->name}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Email </strong></td>
+                              <td>{{$user->email}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Apellidos </strong></td>
+                              <td>{{$user->surname}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Creado </strong></td>
+                              <td>{{Carbon\Carbon::parse($user->created_at)->format('d-m-Y H:i')}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Editado </strong></td>
+                              <td>{{Carbon\Carbon::parse($user->updated_at)->format('d-m-Y H:i')}} </td>
+                            </tr>
+
 
 
                           </tr>
-                        
+
 
 
                         </tbody>

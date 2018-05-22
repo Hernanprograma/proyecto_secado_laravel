@@ -120,7 +120,8 @@
 
 
                                   </div>
-                                  <table id="bootstrap-table" class="table">
+                                  <div class="table-responsive">
+                                  <table class="table">
                                     <thead>
                                       <tr>
                                         <th width="10px">ID</th>
@@ -138,24 +139,24 @@
                                           <td>{{$centrifuga->id}}</td>
                                           <td>{{$centrifuga->centrifuga}}</td>
                                           <td>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</td>
-                                          </td>
+
                                           <td>{{$centrifuga->hora}}</td>
                                           <td>{{$centrifuga->entrada}}</td>
                                           <td>{{$centrifuga->salida}}</td>
                                           @can ('centrifugas.show')
-                                          <td width="10px">
+                                            <td style="padding:0">
                                             <a href="{{ route('centrifugas.show', $centrifuga->id) }}" class="btn btn-sm btn-default">Ver</a>
                                           </td>
                                           @endcan
 
                                           @can ('centrifugas.edit')
-                                          <td width="10px">
+                                            <td style="padding:0">
                                             <a href="{{ route('centrifugas.edit', $centrifuga->id) }}" class="btn btn-sm btn-info">Editar</a>
                                           </td>
                                           @endcan
 
                                           @can ('centrifugas.destroy')
-                                          <td width="10px">
+                                          <td style="padding:0">
                                             {!!Form::open(['route'=>['centrifugas.destroy',$centrifuga->id], 'method'=>'DELETE'])!!}
                                             <button class="btn btn-sm btn-danger">Eliminar</button> {!!Form::close()!!}
                                           </td>
@@ -166,6 +167,7 @@
 
                                       </tbody>
                                   </table>
+                                </div>
                                   {{$centrifugas->render()}}
                               </div>
                           </div><!--  end card  -->

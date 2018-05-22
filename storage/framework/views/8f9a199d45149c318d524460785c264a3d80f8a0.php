@@ -41,7 +41,8 @@
 
 
                                   </div>
-                                  <table id="bootstrap-table" class="table">
+                                  <div class="table-responsive">
+                                  <table class="table">
                                     <thead>
                                       <tr>
                                         <th width="10px">ID</th>
@@ -59,24 +60,24 @@
                                           <td><?php echo e($centrifuga->id); ?></td>
                                           <td><?php echo e($centrifuga->centrifuga); ?></td>
                                           <td><?php echo e(Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')); ?></td>
-                                          </td>
+
                                           <td><?php echo e($centrifuga->hora); ?></td>
                                           <td><?php echo e($centrifuga->entrada); ?></td>
                                           <td><?php echo e($centrifuga->salida); ?></td>
                                           <?php if (\Shinobi::can('centrifugas.show')): ?>
-                                          <td width="10px">
+                                            <td style="padding:0">
                                             <a href="<?php echo e(route('centrifugas.show', $centrifuga->id)); ?>" class="btn btn-sm btn-default">Ver</a>
                                           </td>
                                           <?php endif; ?>
 
                                           <?php if (\Shinobi::can('centrifugas.edit')): ?>
-                                          <td width="10px">
+                                            <td style="padding:0">
                                             <a href="<?php echo e(route('centrifugas.edit', $centrifuga->id)); ?>" class="btn btn-sm btn-info">Editar</a>
                                           </td>
                                           <?php endif; ?>
 
                                           <?php if (\Shinobi::can('centrifugas.destroy')): ?>
-                                          <td width="10px">
+                                          <td style="padding:0">
                                             <?php echo Form::open(['route'=>['centrifugas.destroy',$centrifuga->id], 'method'=>'DELETE']); ?>
 
                                             <button class="btn btn-sm btn-danger">Eliminar</button> <?php echo Form::close(); ?>
@@ -89,6 +90,7 @@
 
                                       </tbody>
                                   </table>
+                                </div>
                                   <?php echo e($centrifugas->render()); ?>
 
                               </div>

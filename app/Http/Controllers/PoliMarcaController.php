@@ -14,7 +14,7 @@ class PoliMarcaController extends Controller
      */
     public function index()
     {
-        $poli_marcas=Poli_marca::paginate();
+        $poli_marcas=Poli_marca::orderBy('created_at', 'desc')->paginate();
         return view('poli_marcas.index', compact('poli_marcas'));
     }
 
@@ -38,8 +38,8 @@ class PoliMarcaController extends Controller
     {
         $poli_marca=Poli_marca::create($request->all());
 
-        return redirect()->route('poli_marcas.edit', $poli_marca->id)
-        ->with('info', 'Producto guardado con éxito');
+        return redirect()->route('poli_marcas.index', $poli_marca->id)
+        ->with('info', 'Marca Creada con éxito');
     }
 
     /**
@@ -74,7 +74,7 @@ class PoliMarcaController extends Controller
     public function update(Request $request, Poli_marca $poli_marca)
     {
         $poli_marca->update($request->all());
-        return redirect()->route('poli_marcas.edit', $poli_marca->id)
+        return redirect()->route('poli_marcas.index', $poli_marca->id)
         ->with('info', 'Campos editados con éxito');
     }
 

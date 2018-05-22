@@ -83,26 +83,49 @@ Route::middleware(['auth'])->group(function () {
 
     Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy')
   ->middleware('permission:users.destroy');
-});
 
-//centrifugas
-Route::get('centrifugas', 'CentrifugaController@index')->name('centrifugas.index')
+
+    //centrifugas
+    Route::get('centrifugas', 'CentrifugaController@index')->name('centrifugas.index')
 ->middleware('permission:centrifugas.index');
 
-Route::get('centrifugas/create', 'CentrifugaController@create')->name('centrifugas.create')
+    Route::get('centrifugas/create', 'CentrifugaController@create')->name('centrifugas.create')
 ->middleware('permission:centrifugas.create');
 
-Route::post('centrifugas/store', 'CentrifugaController@store')->name('centrifugas.store')
+    Route::post('centrifugas/store', 'CentrifugaController@store')->name('centrifugas.store')
 ->middleware('permission:centrifugas.create');
 
-Route::get('centrifugas/{centrifuga}', 'CentrifugaController@show')->name('centrifugas.show')
+    Route::get('centrifugas/{centrifuga}', 'CentrifugaController@show')->name('centrifugas.show')
 ->middleware('permission:centrifugas.show');
 
-Route::get('centrifugas/{centrifuga}/edit', 'CentrifugaController@edit')->name('centrifugas.edit')
+    Route::get('centrifugas/{centrifuga}/edit', 'CentrifugaController@edit')->name('centrifugas.edit')
 ->middleware('permission:centrifugas.edit');
 
-Route::put('centrifugas/{centrifuga}', 'CentrifugaController@update')->name('centrifugas.update')
+    Route::put('centrifugas/{centrifuga}', 'CentrifugaController@update')->name('centrifugas.update')
 ->middleware('permission:centrifugas.edit');
 
-Route::delete('centrifugas/{centrifuga}', 'CentrifugaController@destroy')->name('centrifugas.destroy')
+    Route::delete('centrifugas/{centrifuga}', 'CentrifugaController@destroy')->name('centrifugas.destroy')
 ->middleware('permission:centrifugas.destroy');
+
+    //permisos
+    Route::get('permisos', 'PermissionController@index')->name('permisos.index')
+->middleware('permission:permisos.index');
+
+    Route::get('permisos/create', 'PermissionController@create')->name('permisos.create')
+->middleware('permission:permisos.create');
+
+    Route::post('permisos/store', 'PermissionController@store')->name('permisos.store')
+->middleware('permission:permisos.create');
+
+    Route::get('permisos/{permiso}', 'PermissionController@show')->name('permisos.show')
+->middleware('permission:permisos.show');
+
+    Route::get('permisos/{permiso}/edit', 'PermissionController@edit')->name('permisos.edit')
+->middleware('permission:permisos.edit');
+
+    Route::put('permisos/{permiso}', 'PermissionController@update')->name('permisos.update')
+->middleware('permission:permisos.edit');
+
+    Route::delete('permisos/{permiso}', 'PermissionController@destroy')->name('permisos.destroy')
+->middleware('permission:permisos.destroy');
+});

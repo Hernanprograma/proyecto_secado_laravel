@@ -31,11 +31,11 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
-      <?php if (\Shinobi::can('users.index')): ?>
+      <?php if (\Shinobi::can('permisos.index')): ?>
       <li id="nav-inver">
-        <a href="<?php echo e(route('users.index')); ?>">
+        <a href="<?php echo e(route('permisos.index')); ?>">
               <i class="ti-harddrive"></i>
-              <p>Usuarios</p>
+              <p>Permisos</p>
             </a>
       </li>
       <?php endif; ?>
