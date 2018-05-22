@@ -1,3 +1,4 @@
+{{--
 @extends('layouts.app')
 
 @section('content')
@@ -10,23 +11,23 @@
         </div>
         <div class="panel-body">
 
-          <p><strong>Centrifuga</strong>{{$centrifuga->centrifuga}} </p>
-          <p><strong>Entrada </strong>{{$centrifuga->entrada}} </p>
-          <p><strong>Salida </strong>{{$centrifuga->salida}} </p>
-          <p><strong>Consigna </strong>{{$centrifuga->consigna}} </p>
-          <p><strong>VA </strong>{{$centrifuga->va}} </p>
-          <p><strong>VR </strong>{{$centrifuga->vr}} </p>
-          <p><strong>Par </strong>{{$centrifuga->par}} </p>
-          <p><strong>Temp entrada centrifuga </strong>{{$centrifuga->t_entrada}} </p>
-          <p><strong>Temp_salida centrifuga </strong>{{$centrifuga->t_salida}} </p>
-          <p><strong>Vibracion centrifuga </strong>{{$centrifuga->vibracion}} </p>
-          <p><strong>Caudal entrada a centrifuga </strong>{{$centrifuga->caudal_ent}} </p>
-          <p><strong>Marca de poli </strong>{{$centrifuga->marcapoli}} </p>
-          <p><strong>Caudal de poli </strong>{{$centrifuga->caudal_poli}} </p>
-          <p><strong>Aspecto escurrido </strong>{{$centrifuga->aspecto}} </p>
-          <p><strong>Fecha </strong>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</p>
-          <p><strong>Hora </strong>{{Carbon\Carbon::parse($centrifuga->hora)->format('H:i')}}</p>
-          <p><strong>Usuario dato </strong>{{$centrifuga->user->name}} </p>
+          <tr><strong>Centrifuga</strong>{{$centrifuga->centrifuga}} </td></tr>
+          <tr><strong>Entrada </strong>{{$centrifuga->entrada}} </td></tr>
+          <tr><strong>Salida </strong>{{$centrifuga->salida}} </td></tr>
+          <tr><strong>Consigna </strong>{{$centrifuga->consigna}} </td></tr>
+          <tr><strong>VA </strong>{{$centrifuga->va}} </td></tr>
+          <tr><strong>VR </strong>{{$centrifuga->vr}} </td></tr>
+          <tr><strong>Par </strong>{{$centrifuga->par}} </td></tr>
+          <tr><strong>Temp entrada centrifuga </strong>{{$centrifuga->t_entrada}} </td></tr>
+          <tr><strong>Temp_salida centrifuga </strong>{{$centrifuga->t_salida}} </td></tr>
+          <tr><strong>Vibracion centrifuga </strong>{{$centrifuga->vibracion}} </td></tr>
+          <tr><strong>Caudal entrada a centrifuga </strong>{{$centrifuga->caudal_ent}} </td></tr>
+          <tr><strong>Marca de poli </strong>{{$centrifuga->marcapoli}} </td></tr>
+          <tr><strong>Caudal de poli </strong>{{$centrifuga->caudal_poli}} </td></tr>
+          <tr><strong>Aspecto escurrido </strong>{{$centrifuga->aspecto}} </td></tr>
+          <tr><strong>Fecha </strong>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</td></tr>
+          <tr><strong>Hora </strong>{{Carbon\Carbon::parse($centrifuga->hora)->format('H:i')}}</td></tr>
+          <tr><strong>Usuario dato </strong>{{$centrifuga->user->name}} </td></tr>
 
 
         </div>
@@ -34,4 +35,111 @@
     </div>
   </div>
 </div>
-@endsection
+@endsection --}}
+
+<!doctype html>
+<html lang="es">
+<!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
+@include('partials.head')
+
+<body>
+  <div class="wrapper">
+    <!--BARRA IZQUIERDA DE MENUS ......esta en la ruta views/partials/sidebar-->
+    @include('partials.sidebar')
+
+    <div class="main-panel">
+      <!--BARRA SUPERIOR DE MENUS ......esta en la ruta views/partials/sidebar-->
+      @include('partials.defaultbar')
+
+      <div class="content">
+        <div class="container-fluid">
+
+
+
+
+          <div class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Centífugas</h4>
+                      <p class="category">Datos y muestras de las centrífugas</p>
+                    </div>
+                    <div class="card-content">
+
+
+
+
+
+
+
+
+                      <table id="bootstrap-table" class="table">
+                        <thead>
+                          <tr>
+                            <th width="30px">Dato</th>
+                            <th width="30px">Valor</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <tr><td><strong>Centrifuga</strong></td><td>{{$centrifuga->centrifuga}} </td></tr>
+                            <tr><td><strong>Entrada </strong></td><td>{{$centrifuga->entrada}} </td></tr>
+                            <tr><td><strong>Salida </strong></td><td>{{$centrifuga->salida}} </td></tr>
+                            <tr><td><strong>Consigna </strong></td><td>{{$centrifuga->consigna}} </td></tr>
+                            <tr><td><strong>VA </strong></td><td>{{$centrifuga->va}} </td></tr>
+                            <tr><td><strong>VR </strong></td><td>{{$centrifuga->vr}} </td></tr>
+                            <tr><td><strong>Par </strong></td><td>{{$centrifuga->par}} </td></tr>
+                            <tr><td><strong>Temp entrada centrifuga </strong></td><td>{{$centrifuga->t_entrada}} </td></tr>
+                            <tr><td><strong>Temp_salida centrifuga </strong></td><td>{{$centrifuga->t_salida}} </td></tr>
+                            <tr><td><strong>Vibracion centrifuga </strong></td><td>{{$centrifuga->vibracion}} </td></tr>
+                            <tr><td><strong>Caudal entrada a centrifuga </strong></td><td>{{$centrifuga->caudal_ent}} </td></tr>
+                            <tr><td><strong>Marca de poli </strong></td><td>{{$centrifuga->marcapoli}} </td></tr>
+                            <tr><td><strong>Caudal de poli </strong></td><td>{{$centrifuga->caudal_poli}} </td></tr>
+                            <tr><td><strong>Aspecto escurrido </strong></td><td>{{$centrifuga->aspecto}} </td></tr>
+                            <tr><td><strong>Fecha </strong></td><td>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</td></tr>
+                            <tr><td><strong>Hora </strong></td><td>{{Carbon\Carbon::parse($centrifuga->hora)->format('H:i')}}</td></tr>
+                            <tr><td><strong>Usuario dato </strong></td><td>{{$centrifuga->user->name}} </td></tr>
+
+
+                          </td></tr>
+
+
+                        </tbody>
+                      </table>
+
+
+
+
+
+
+                    </div>
+                  </div>
+                  <!--  end card  -->
+                </div>
+                <!-- end col-md-12 -->
+              </div>
+              <!-- end row -->
+            </div>
+          </div>
+
+
+          @include('partials.footer')
+        </div>
+      </div>
+</body>
+
+@include('partials.scripts')
+
+
+<!-- Scripts Charts-->
+
+
+<script type="text/javascript">
+  $('#nav-cent').addClass('active');
+</script>
+
+</html>

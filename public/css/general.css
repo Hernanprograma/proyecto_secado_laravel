@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, object, iframe,textarea,h1, h2, h3, h4, h5, h6, p, a, em, img, strong, dl, dt, dd, ol, ul, li, form, table, tbody, tr, th, td {
+margin:0;padding:0;outline:0;}
+*html{background-image:url(about:blank);background-attachment:fixed;}/*解决IE6下滚动抖动的问题*/
+body{font-family:Arial, Helvetica, sans-serif,'微软雅黑';font-size:12px;min-width:600px;color:#333333;}
+
+@media (min-width: 1200px) {
+    .col-lg-3 {
+        width: 20%;
+    }
+}
+
+li{list-style:none;}
+img{border:0}
+a{outline:none;cursor:pointer;color:#333333;}
+a:link{outline:none;text-decoration:none;}
+a, a:link,a:visited{text-decoration:none;}
+a:active {star:expression(this.onFocus=this.blur());}
+a:hover{color:#f60;}
+.clear{clear:both}
+.mrg_top20{margin-top:20px;}
+.center{text-align:center;}
+.radius{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+/*-------------------------------版头-------------------------------*/
+#header{position:relative;width:100%;padding-left:30px;display:block;height:85px;background: url(../images/header_bg.gif) repeat-x white;}
+#header .logo{float:left;margin-top:10px;}
+#header .logo i{float:left;margin:0 10px;margin-top:30px;width:10px;height:22px;background:url(../images/logo_line.png) no-repeat;}
+#header .logo img{float:left;margin-top: 10px;}
+#header .logo span{float:left;margin-top:26px;font-size:20px;letter-spacing:1px;color:#6D6E71;font-weight:bold;}
+#header .other{position:absolute;padding-top:30px;padding-left:30px;right:30px;height:85px;}
+#header .other .user{float:left;}
+#header .other .user span{color:#E85117;font-weight:bold;}
+#header .other .user a{display:inline-block;margin-left:20px;background-color:#E85117;color:white;font-weight:bold;padding:0 10px;line-height:22px;}
+#header .other .language{float:left;margin-left:20px;}
+#header .other .language button{padding:2px 10px;text-align:right;border:0;background-color:#EF961E;color:white;}
+#header .other .language button i.english{float:left;margin-top:3px;width:18px;height:12px;margin-right:5px;background:url(../images/english.gif) no-repeat;}
+#header .other .language ul{left:0px;}
+/*-------------------------------内容-------------------------------*/
+#content{position:relative;padding-left:200px;}
+/*-------------------------------侧栏导航-------------------------------*/
+#sidebar_nav{width:200px;position:absolute;left:0;top:0;}
+#sidebar_nav i{font-size:14px;margin-right:10px;}
+#sidebar_nav dt{color:white;background-color:#e3781a;line-height:35px;font-weight:bold;padding-left:20px;}
+#sidebar_nav dd i{width:5px;height:5px;display:inline-block;background:url(../images/circle.png) no-repeat;}
+/*#sidebar_nav dd a.cur i{background:url(../images/circle_cur.png) no-repeat;}*/
+#sidebar_nav dd a.online i{background:url(../images/circle_cur.png) no-repeat;}
+#sidebar_nav a{display:block;color:white;}
+#sidebar_nav a:hover{background-color:#2d323d;}
+#sidebar_nav dd a{line-height:30px;display:block;padding-left:45px;}
+#sidebar_nav dd a.cur,#sidebar_nav li a.cur{color:#383e4b;background-color:#f5f5f5;}
+#sidebar_nav li a{display:block;line-height:35px;padding-left:20px;}
+/*-------------------------------数据-------------------------------*/
+#date{float:left;width:100%;}
+/*-------------------------------导航-------------------------------*/
+#date .nav{background-color:#e3781a;line-height:35px;}
+#date .nav li{float:left;}
+#date .nav li a{display:block;padding:0 20px;color:white;}
+#date .nav li a.cur{background-color:#f5f5f5;color:#383e4b;border-top: 2px solid #e3781a;height:35px;}
+#date .nav li a:hover{background-color:#AF5315;color:white;}
+/*-------------------------------统计-------------------------------*/
+#date .statistics{padding:20px 10px 0 10px;}
+#date .statistics .box{padding:10px;margin-bottom:20px;min-width:200px;background-color:white;border:1px solid #e4e6eb;border-bottom:2px solid #e4e6eb;}
+#date .statistics .box .power{float:left;width:50px;height:50px;background:url(../images/statistics_icon.png) no-repeat 12px 15px #E85117;}
+#date .statistics .box .electricity{float:left;width:50px;height:50px;background:url(../images/statistics_icon.png) no-repeat 12px -39px}
+#date .statistics .box .today_electricity{background-color:#fa893d;}
+#date .statistics .box .month_electricity{background-color: #fabb3d;}
+#date .statistics .box .years_electricity{background-color: #93b536;}
+#date .statistics .box .total_electricity{background-color: #B5D169 ;}
+#date .statistics .box span{float:left;margin-left:10px;margin-top:3px;}
+#date .statistics .box span label{display:block;color:#9ca2be;font-weight:100;}
+#date .statistics .box span b{display:block;font-size:16px;margin-top:8px;color:#383e4b;}
+/*-------------------------------公共模块-------------------------------*/
+.public_box{background-color:white;margin-bottom:20px;border:1px solid #e4e6eb;border-top:0;border-bottom:2px solid #e4e6eb;}
+.public_title{background: url(../images/title_bg.gif) repeat-x #F3F3F6;height:39px;}
+ .overview i{background:url(../images/overview_icon.png) no-repeat;}
+.public_title i{width:30px;height:35px;line-height:39px;float:left;font-size:15px;color:#EF721E;text-align:center;}
+.public_title h2{float: left;color: #ef721e;font-size: 16px;font-weight: bold;margin-left: 5px;}
+.public_title i.power_icon{background-position:9px -32px;}
+.public_title i.energy_icon{background-position:9px 10px;}
+.public_title i.map_icon{background-position:9px -78px;}
+.public_title i.info_icon{background-position:8px -125px;}
+/*-------------------------------概况-------------------------------*/
+#date .overview{padding:0 5px;}
+/*-------------------------------功率图表-------------------------------*/
+#date .overview .power_chart{height:295px;margin:10px;}
+/*-------------------------------功率图表-------------------------------*/
+#date .overview .energy_chart{height:295px;margin:10px;}
+/*-------------------------------地图-------------------------------*/
+#date .overview .map{height:295px;margin:10px;background:url(../images/map.jpg) no-repeat;}
+/*-------------------------------信息-------------------------------*/
+#date .overview .info li{height:52px;padding:0 15px;position:relative;border-bottom:1px solid #e4e6eb;}
+#date .overview .info li label{line-height:35px;}
+#date .overview .info li span{line-height:20px;padding:0 5px;position:absolute;right:15px;top:20px;color:white;font-weight:bold;}
+#date .overview .info .red{background-color:#ff5454;}
+#date .overview .info .orange{background-color:#fa893d;}
+#date .overview .info .orange2{background-color:#fabb3d;}
+#date .overview .info .green{background-color:#8EAA43;}
+#date .overview .info .blue{background-color:#649AB4;}
+/*-------------------------------表格-------------------------------*/
+#date .table{padding:5px 10px;margin-bottom: 0;}
+#date .table .con{padding:5px;}
+#date .table th{background-color:#eeefee;}
+.title-select.cur
+{
+background-color: #E85117;
+}
+
+.title-select.right
+{
+margin-right: 30px;
+}
+
+span.title-select
+{
+line-height: 28px;
+
+margin-top: 7px;
+font-size: 14px;
+float: right;
+margin: 7px 5px 0 0;
+padding: 0 10px;
+background-color: #FABB3D;
+color: white;
+}
+.title-select a
+{
+color: white;
+}
+
+.public_title i.power_icon{background-position:9px -32px;}
+.public_title i.energy_icon{background-position:9px 12px;}
+.public_title i.map_icon{background-position:9px -77px;}
+.public_title i.info_icon{background-position:8px -123px;}
+
+.time_query{float:right;width:160px;margin-top:2px;margin-right:10px;}
+.time_query a{float:left;margin-top:9px;color:#898887;}
+.time_query a:hover{color:#ef721e;}
+.time_query .form-control{float:left;width:110px;margin:0 10px;margin-top:4px;height:28px;text-align:center;}
+.deadline_query{float:right;margin-right:0;}
+.deadline_query li{float:left;}
+.deadline_query li a{display:block;line-height:38px;padding:0 15px;border-left:1px solid
+
+#d9d9d9;font-size:13px;font-weight:bold;color:#777;}
+.deadline_query li a.cur{background-color:white;border-top:1px solid #ef721e;color:#f60;}
+.deadline_query li a:hover{color:#f60;}
+
+
+
+
+statistics{padding:20px 10px 0 10px;}
+.statistics .box{padding:10px;margin-bottom:20px;min-width:200px;background-color:white;border:1px solid #e4e6eb;border-bottom:2px solid #e4e6eb;}
+.statistics .box .power{float:left;width:50px;height:50px;background:url(../images/statistics_icon.png) no-repeat 12px 15px #E85117;}
+.statistics .box .electricity{float:left;width:50px;height:50px;background:url(../images/statistics_icon.png) no-repeat 12px -39px}
+.statistics .box .today_electricity{background-color:#fa893d;}
+.statistics .box .month_electricity{background-color: #fabb3d;}
+.statistics .box .years_electricity{background-color: #93b536;}
+.statistics .box .total_electricity{background-color: #B5D169 ;}
+.statistics .box span{float:left;margin-left:10px;margin-top:3px;}
+.statistics .box span label{display:block;color:#9ca2be;font-weight:100;}
+.statistics .box span b{display:block;font-size:16px;margin-top:8px;color:#383e4b;}
+
+
+
+
+
+
+
+/*----------------------------eliminar amcharts copiright; habilitar en produccion---------------------*/
+.amcharts-chart-div a {display:none !important;}
+
+
+
+
+
+.buble {
+    position: absolute;
+    width: 100%;
+    top: 83px;
+    font-size: 12px;
+    text-align: center;
+    color: #D09421;
+    font-family: arial;
+}
+.buble_centro {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    font-size: 12px;
+    text-align: center;
+    color: #D09421;
+    font-family: arial;
+}
+.buble_bat_carga {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    font-size: 12px;
+    text-align: center;
+    color: #D09421;
+    font-family: arial;
+}
+.buble_bat_descarga {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    font-size: 12px;
+    text-align: center;
+    color: #D09421;
+    font-family: arial;
+}
+
+
+
+
+
+.curtain {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 25px;
+}
+
+.curtain span {
+
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+.curtain span img {
+
+  width: 10%;
+
+}

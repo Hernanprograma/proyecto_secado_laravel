@@ -15,7 +15,7 @@ class CentrifugaController extends Controller
      */
     public function index()
     {
-        $centrifugas=Centrifuga::orderBy('fecha', 'desc')->orderBy('hora', 'desc')->paginate(10);
+        $centrifugas=Centrifuga::orderBy('fecha', 'desc')->orderBy('hora', 'desc')->paginate(5);
         return view('centrifugas.index', compact('centrifugas'));
     }
 
@@ -78,6 +78,9 @@ class CentrifugaController extends Controller
      */
     public function update(Request $request, Centrifuga $centrifuga)
     {
+        $centrifuga->user_id = Auth::user()->id;
+
+
         $centrifuga->update($request->all());
         return redirect()->route('centrifugas.index', $centrifuga->id)
         ->with('info', 'Campos editados con éxito');
