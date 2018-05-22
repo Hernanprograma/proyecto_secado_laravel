@@ -31,10 +31,9 @@ class CreateCentrifugasTable extends Migration
             $table->string('aspecto');
             $table->string('fecha');
             $table->string('hora');
-            $table->unsignedInteger('user_id')->unsigned();
+            $table->unsignedInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

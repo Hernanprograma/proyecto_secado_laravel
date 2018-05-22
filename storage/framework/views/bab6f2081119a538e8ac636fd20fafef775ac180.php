@@ -25,15 +25,51 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Usuario</h4>
-                      <p class="category">Editar datos.</p>
+                      <h4 class="card-title">Centífugas</h4>
+                      <p class="category">Detalles de muestra de la centrífuga</p>
                     </div>
                     <div class="card-content">
 
-                      <?php echo Form::model($user, ['route'=> ['users.update',$user], 'method'=>'PUT']); ?>
 
 
-                      <?php echo $__env->make('users.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> <?php echo Form::close(); ?>
+
+
+
+
+
+                      <table  class="table table-striped table-hover">
+                        <thead>
+                          <tr>
+                            <th width="30px">Dato</th>
+                            <th width="30px">Valor</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <tr>
+                              <td><strong>Marca</strong></td>
+                              <td><?php echo e($poli_marca->name); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Precio </strong></td>
+                              <td><?php echo e($poli_marca->precio); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Peso </strong></td>
+                              <td><?php echo e($poli_marca->peso); ?> </td>
+                            </tr>
+
+                          </tr>
+
+
+
+
+                        </tbody>
+                      </table>
+
+
 
 
 

@@ -15,25 +15,22 @@
 
       <div class="content">
         <div class="container-fluid">
-
-
-
-
           <div class="content">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Usuario</h4>
-                      <p class="category">Editar datos.</p>
+                      <h4 class="card-title">Marcas de Polielectrolito</h4>
+                      <p class="category">Agregar marca de polielectrolito</p>
                     </div>
                     <div class="card-content">
 
-                      <?php echo Form::model($user, ['route'=> ['users.update',$user], 'method'=>'PUT']); ?>
 
+                      <?php echo Form::open(['route'=> 'poli_marcas.store']); ?>
 
-                      <?php echo $__env->make('users.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> <?php echo Form::close(); ?>
+                      <?php echo $__env->make('poli_marcas.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                      <?php echo Form::close(); ?>
 
 
 
@@ -61,7 +58,7 @@
 
 
 <script type="text/javascript">
-  $('#nav-cent').addClass('active');
+  $('#nav-poli').addClass('active');
 </script>
 
 </html>

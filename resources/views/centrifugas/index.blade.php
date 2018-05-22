@@ -105,7 +105,7 @@
                           <div class="card">
                             <div class="card-header">
 	                                <h4 class="card-title">Centífugas</h4>
-	                                <p class="category">Datos y muestras de las centrífugas</p>
+	                                <p class="category">Lista de Datos y muestras de las centrífugas</p>
 	                            </div>
                               <div class="card-content">
                                   <div class="toolbar">
@@ -116,8 +116,6 @@
                                         <a href="{{route('centrifugas.create')}}" class="btn btn-primary pull-right">
                                                   Crear
                                                 </a>
-
-
                                         @endcan
 
 

@@ -64,21 +64,14 @@
                   <div class="card">
                     <div class="card-header">
                       <h4 class="card-title">Centífugas</h4>
-                      <p class="category">Datos y muestras de las centrífugas</p>
+                      <p class="category">Detalles de muestra de la centrífuga</p>
                     </div>
                     <div class="card-content">
 
-
-
-
-
-
-
-
-                      <table id="bootstrap-table" class="table">
+                        <table  class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th width="30px">Dato</th>
+                            <th width="20px">Dato</th>
                             <th width="30px">Valor</th>
 
                           </tr>
@@ -102,10 +95,9 @@
                             <tr><td><strong>Aspecto escurrido </strong></td><td>{{$centrifuga->aspecto}} </td></tr>
                             <tr><td><strong>Fecha </strong></td><td>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</td></tr>
                             <tr><td><strong>Hora </strong></td><td>{{Carbon\Carbon::parse($centrifuga->hora)->format('H:i')}}</td></tr>
-                            <tr><td><strong>Usuario dato </strong></td><td>{{$centrifuga->user->name}} </td></tr>
+                            <tr><td><strong>Usuario dato </strong></td><td>@isset($centrifuga->user->name){{$centrifuga->user->name}} @endisset</td></tr>
 
-
-                          </td></tr>
+                          </tr>
 
 
                         </tbody>

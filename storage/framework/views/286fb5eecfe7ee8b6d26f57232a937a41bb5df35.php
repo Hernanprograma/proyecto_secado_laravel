@@ -40,7 +40,7 @@ Tip 2: you can change the color of the active button using the data-active-color
       </li>
       <?php endif; ?>
         <?php if (\Shinobi::can('roles.index')): ?>
-      <li id="nav-histo">
+      <li id="nav-roles">
         <a href="<?php echo e(route('roles.index')); ?>">
               <i class="ti-stats-up"></i>
               <p>Roles</p>
@@ -48,16 +48,16 @@ Tip 2: you can change the color of the active button using the data-active-color
       </li>
     <?php endif; ?>
 
-      <li id="nav-not">
-        <a href="notificaciones">
+      <li id="nav-poli">
+      <a href="<?php echo e(route('poli_marcas.index')); ?>">
               <i class="ti-bell"></i>
-              <p>Notificaciones</p>
+              <p>Marca de poli</p>
             </a>
       </li>
       <li id="nav-user">
-        <a href="userprofile">
+        <a href="<?php echo e(route('users.index')); ?>">
               <i class="ti-user"></i>
-              <p>Perfil de usuario</p>
+              <p>Usuarios</p>
             </a>
       </li>
     </ul>
