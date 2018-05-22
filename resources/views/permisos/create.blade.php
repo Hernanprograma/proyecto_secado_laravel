@@ -1,23 +1,4 @@
-{{--
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Rol
-        </div>
-        <div class="panel-body">
-          {!!Form::open(['route'=> 'roles.store'])!!}
-          @include('roles.partials.form') {!!Form::close()!!}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection --}}
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -44,13 +25,13 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Rol</h4>
-                      <p class="category">Editar rol.</p>
+                      <h4 class="card-title">Permiso</h4>
+                      <p class="category">Crear permiso</p>
                     </div>
                     <div class="card-content">
 
-                      {!!Form::open(['route'=> 'roles.store'])!!}
-                      @include('roles.partials.form') {!!Form::close()!!}
+                      {!!Form::open(['route'=> 'permisos.store'])!!}
+                      @include('permisos.partials.form') {!!Form::close()!!}
 
 
                     </div>
@@ -76,7 +57,7 @@
 
 
 <script type="text/javascript">
-  $('#nav-roles').addClass('active');
+  $('#nav-permisos').addClass('active');
 </script>
 
 </html>

@@ -45,8 +45,15 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        $roles=Role::get();
-        return view('roles.edit', compact('role', 'roles'));
+        $permisos=Permission::get();
+        //$tengo=$role->permissions;
+
+        //$permisos=$role->permissions();
+
+
+
+        //dd($permisos);
+        return view('roles.edit', compact('role', 'permisos'));
     }
 
     /**
@@ -56,7 +63,11 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('roles.create');
+        $permisos=null;
+        //$role=Role::get();
+
+
+        return view('roles.create', compact('permisos'));
     }
 
     /**
@@ -69,6 +80,7 @@ class RoleController extends Controller
     {
         $role=Role::create($request->all());
 
+        $role->permissions()->sync($request->get('permisos'));
         return redirect()->route('roles.edit', $role->id)
         ->with('info', 'Producto guardado con éxito');
     }
@@ -84,8 +96,12 @@ class RoleController extends Controller
     {   //actualizar usuario
         $role->update($request->all());
 
-        //actualizar roles
-        //$role->roles()->sync($request->get('roles'));
+
+        //$role->permissions()->sync($request->get('slug'));
+
+        //dd($request->get('permisos'));
+        $role->permissions()->sync($request->get('permisos'));
+
 
         return redirect()->route('roles.edit', $role->id)
         ->with('info', 'Usuario actualizado con éxito');
