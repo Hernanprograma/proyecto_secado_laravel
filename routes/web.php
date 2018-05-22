@@ -128,4 +128,26 @@ Route::middleware(['auth'])->group(function () {
 
     Route::delete('permisos/{permiso}', 'PermissionController@destroy')->name('permisos.destroy')
 ->middleware('permission:permisos.destroy');
+
+    //Simbioticas
+    Route::get('simbioticas', 'SimbioticaController@index')->name('simbioticas.index')
+->middleware('permission:simbioticas.index');
+
+    Route::get('simbioticas/create', 'SimbioticaController@create')->name('simbioticas.create')
+->middleware('permission:simbioticas.create');
+
+    Route::post('simbioticas/store', 'SimbioticaController@store')->name('simbioticas.store')
+->middleware('permission:simbioticas.create');
+
+    Route::get('simbioticas/{simbiotica}', 'SimbioticaController@show')->name('simbioticas.show')
+->middleware('permission:simbioticas.show');
+
+    Route::get('simbioticas/{simbiotica}/edit', 'SimbioticaController@edit')->name('simbioticas.edit')
+->middleware('permission:simbioticas.edit');
+
+    Route::put('simbioticas/{simbiotica}', 'SimbioticaController@update')->name('simbioticas.update')
+->middleware('permission:simbioticas.edit');
+
+    Route::delete('simbioticas/{simbiotica}', 'SimbioticaController@destroy')->name('simbioticas.destroy')
+->middleware('permission:simbioticas.destroy');
 });
