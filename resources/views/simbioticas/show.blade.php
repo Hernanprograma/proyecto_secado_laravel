@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-content">
 
-                        <table  class="table table-striped table-hover">
+                      <table class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="20px">Dato</th>
@@ -40,13 +40,36 @@
                         <tbody>
 
                           <tr>
-                            <tr><td><strong>ID</strong></td><td>{{$simbiotica->id}} </td></tr>
-                            <tr><td><strong>Caudal </strong></td><td>{{$simbiotica->caudal}} </td></tr>
-                            <tr><td><strong>Totalizado </strong></td><td>{{$simbiotica->totalizado}} </td></tr>
-                            <tr><td><strong>Incidencias </strong></td><td>{{$simbiotica->incidencias}} </td></tr>
-                            <tr><td><strong>Fecha </strong></td><td>{{Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')}}</td></tr>
-                            <tr><td><strong>Hora </strong></td><td>{{Carbon\Carbon::parse($simbiotica->hora)->format('H:i')}}</td></tr>
-                            <tr><td><strong>Crea registro</strong></td><td>@isset($simbiotica->user->name){{$simbiotica->user->name}} @endisset</td></tr>
+                            <tr>
+                              <td><strong>ID</strong></td>
+                              <td>{{$simbiotica->id}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Caudal </strong></td>
+                              <td>{{$simbiotica->caudal}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Totalizado </strong></td>
+                              <td>{{$simbiotica->totalizado}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Incidencias </strong></td>
+                              <td>{{$simbiotica->incidencias}} </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Fecha </strong></td>
+                              <td>{{Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Hora </strong></td>
+                              <td>{{Carbon\Carbon::parse($simbiotica->hora)->format('H:i')}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Crea registro</strong></td>
+                              <td>
+                                @isset($simbiotica->user->name){{$simbiotica->user->name}}
+                                  <blade endisset</td>
+                            </tr>/>
 
                           </tr>
 

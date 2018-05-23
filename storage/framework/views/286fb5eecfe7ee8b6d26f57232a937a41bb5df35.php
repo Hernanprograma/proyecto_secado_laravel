@@ -24,12 +24,11 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
-      <?php if (\Shinobi::can('centrifugas.index')): ?>
-      <li id="nav-cent">
-        <a href="<?php echo e(route('centrifugas.index')); ?>">
-              <i class="ti-bolt"></i>
-              <p>Centrífugas</p>
-
+      <?php if (\Shinobi::can('roles.index')): ?>
+      <li id="nav-roles">
+        <a href="<?php echo e(route('roles.index')); ?>">
+              <i class="ti-stats-up"></i>
+              <p>Roles</p>
             </a>
       </li>
       <?php endif; ?>
@@ -41,22 +40,6 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
-      <?php if (\Shinobi::can('roles.index')): ?>
-      <li id="nav-roles">
-        <a href="<?php echo e(route('roles.index')); ?>">
-              <i class="ti-stats-up"></i>
-              <p>Roles</p>
-            </a>
-      </li>
-      <?php endif; ?>
-      <?php if (\Shinobi::can('poli_marcas.index')): ?>
-      <li id="nav-poli">
-        <a href="<?php echo e(route('poli_marcas.index')); ?>">
-              <i class="ti-bell"></i>
-              <p>Marca de poli</p>
-            </a>
-      </li>
-      <?php endif; ?>
       <?php if (\Shinobi::can('users.index')): ?>
       <li id="nav-user">
         <a href="<?php echo e(route('users.index')); ?>">
@@ -65,6 +48,34 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
+      <?php if (\Shinobi::can('linea_muestras.index')): ?>
+      <li id="nav-linea_muestras">
+        <a href="<?php echo e(route('linea_muestras.index')); ?>">
+              <i class="ti-harddrive"></i>
+              <p>Muestras de linea</p>
+            </a>
+      </li>
+      <?php endif; ?>
+      <?php if (\Shinobi::can('centrifugas.index')): ?>
+      <li id="nav-cent">
+        <a href="<?php echo e(route('centrifugas.index')); ?>">
+              <i class="ti-bolt"></i>
+              <p>Centrífugas</p>
+
+            </a>
+      </li>
+      <?php endif; ?>
+
+
+      <?php if (\Shinobi::can('poli_marcas.index')): ?>
+      <li id="nav-poli">
+        <a href="<?php echo e(route('poli_marcas.index')); ?>">
+              <i class="ti-bell"></i>
+              <p>Marca de poli</p>
+            </a>
+      </li>
+      <?php endif; ?>
+
       <?php if (\Shinobi::can('simbioticas.index')): ?>
       <li id="nav-simbio">
         <a href="<?php echo e(route('simbioticas.index')); ?>">

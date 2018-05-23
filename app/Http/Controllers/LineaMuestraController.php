@@ -6,7 +6,7 @@ use App\Linea_muestra;
 use Illuminate\Http\Request;
 use Auth;
 
-class Linea_muestraController extends Controller
+class LineaMuestraController extends Controller
 {
     /**
      * Display a listing of the resource.

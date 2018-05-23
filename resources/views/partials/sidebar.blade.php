@@ -24,12 +24,11 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
-      @can ('centrifugas.index')
-      <li id="nav-cent">
-        <a href="{{route('centrifugas.index')}}">
-              <i class="ti-bolt"></i>
-              <p>Centrífugas</p>
-
+      @can ('roles.index')
+      <li id="nav-roles">
+        <a href="{{route('roles.index')}}">
+              <i class="ti-stats-up"></i>
+              <p>Roles</p>
             </a>
       </li>
       @endcan
@@ -41,22 +40,6 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
-      @can ('roles.index')
-      <li id="nav-roles">
-        <a href="{{route('roles.index')}}">
-              <i class="ti-stats-up"></i>
-              <p>Roles</p>
-            </a>
-      </li>
-      @endcan
-      @can ('poli_marcas.index')
-      <li id="nav-poli">
-        <a href="{{route('poli_marcas.index')}}">
-              <i class="ti-bell"></i>
-              <p>Marca de poli</p>
-            </a>
-      </li>
-      @endcan
       @can ('users.index')
       <li id="nav-user">
         <a href="{{route('users.index')}}">
@@ -65,6 +48,34 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
+      @can ('linea_muestras.index')
+      <li id="nav-linea_muestras">
+        <a href="{{route('linea_muestras.index')}}">
+              <i class="ti-harddrive"></i>
+              <p>Muestras de linea</p>
+            </a>
+      </li>
+      @endcan
+      @can ('centrifugas.index')
+      <li id="nav-cent">
+        <a href="{{route('centrifugas.index')}}">
+              <i class="ti-bolt"></i>
+              <p>Centrífugas</p>
+
+            </a>
+      </li>
+      @endcan
+
+
+      @can ('poli_marcas.index')
+      <li id="nav-poli">
+        <a href="{{route('poli_marcas.index')}}">
+              <i class="ti-bell"></i>
+              <p>Marca de poli</p>
+            </a>
+      </li>
+      @endcan
+
       @can ('simbioticas.index')
       <li id="nav-simbio">
         <a href="{{route('simbioticas.index')}}">
