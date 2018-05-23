@@ -197,5 +197,32 @@ class PermissionsTableSeeder extends Seeder
     'slug' =>'linea_muestras.destroy',
     'description' =>'Eliminar cualquier registro de muestras de la linea del sistema',
     ]);
+
+        //Muestras datos
+        Permission::create([
+    'name' =>'Ver lista de datos de la linea',
+    'slug' =>'linea_datos.index',
+    'description' =>'Lista y navega por todas los registros de datos de la linea en el sistema',
+    ]);
+        Permission::create([
+    'name' =>'Ver detalle de las datos de la linea',
+    'slug' =>'linea_datos.show',
+    'description' =>'Ver en detalle cada una de los registros de datos de la linea  en el sistema',
+    ]);
+        Permission::create([
+    'name' =>'Editar los datos de la linea',
+    'slug' =>'linea_datos.edit',
+    'description' =>'Editar cualquier registro de datos de la linea del sistema',
+    ]);
+        Permission::create([
+    'name' =>'Creacion  de datos de la linea',
+    'slug' =>'linea_datos.create',
+    'description' =>'Crea una registro de datos de la linea en el sistema',
+    ]);
+        Permission::create([
+    'name' =>'Eliminar datos de la linea',
+    'slug' =>'linea_datos.destroy',
+    'description' =>'Eliminar cualquier registro de datos de la linea del sistema',
+    ]);
     }
 }

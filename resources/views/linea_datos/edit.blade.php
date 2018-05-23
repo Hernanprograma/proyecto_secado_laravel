@@ -59,7 +59,7 @@
 
 
 <script type="text/javascript">
-  $('#nav-linea_muestras').addClass('active');
+  $('#nav-linea_datos').addClass('active');
 </script>
 
 </html>

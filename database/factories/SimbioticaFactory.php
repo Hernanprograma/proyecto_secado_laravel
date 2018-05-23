@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\User;
 
 $factory->define(App\Simbiotica::class, function (Faker $faker) {
     return [

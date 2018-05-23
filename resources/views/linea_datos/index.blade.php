@@ -24,16 +24,16 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Muestras de linea</h4>
-                      <p class="category">Lista de Datos y muestras de linea de secado</p>
+                      <h4 class="card-title">Datos de la linea</h4>
+                      <p class="category">Lista de Datos de la linea</p>
                     </div>
                     <div class="card-content">
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
 
-                        @can ('linea_muestras.create')
-                        <a href="{{route('linea_muestras.create')}}" class="btn btn-primary pull-right">
+                        @can ('linea_datos.create')
+                        <a href="{{route('linea_datos.create')}}" class="btn btn-primary pull-right">
                                                   Crear
                                                 </a>
                         @endcan
@@ -48,36 +48,45 @@
                               <th>Línea</th>
                               <th>Fecha</th>
                               <th>Hora</th>
-                              <th>Entrada </th>
-                              <th>Salida</th>
+                              <th>Operario</th>
+                              <th>TT1</th>
+                              <th>TT2</th>
+                              <th>TT3</th>
+                              <th>TT4</th>
                               <th colspan="3">&nbsp;</th>
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach ($linea_muestras as $linea_muestra)
+                            @foreach ($linea_datos as $linea_dato)
                             <tr>
-                              
-                              <td>{{$linea_muestra->linea}}</td>
-                              <td>{{Carbon\Carbon::parse($linea_muestra->fecha)->format('d-m-Y')}}</td>
-                              <td>{{Carbon\Carbon::parse($linea_muestra->hora)->format('H:i')}}</td>
-                              <td>{{$linea_muestra->sequedadentrada}}</td>
-                              <td>{{$linea_muestra->sequedadsalida}}</td>
 
-                              @can ('linea_muestras.show')
+                              <td>{{$linea_dato->linea}}</td>
+                              <td>{{Carbon\Carbon::parse($linea_dato->fecha)->format('d-m-Y')}}</td>
+                              <td>{{Carbon\Carbon::parse($linea_dato->hora)->format('H:i')}}</td>
+                              <td>
+                                @isset($linea_dato->user->name){{$linea_dato->user->name}}
+                                  @endisset
+                              </td>
+                              <td>{{$linea_dato->tt1}}</td>
+                              <td>{{$linea_dato->tt2}}</td>
+                              <td>{{$linea_dato->tt3}}</td>
+                              <td>{{$linea_dato->tt4}}</td>
+
+                              @can ('linea_datos.show')
                               <td style="padding:0">
-                                <a href="{{ route('linea_muestras.show', $linea_muestra->id) }}" class="btn btn-sm btn-default">Ver</a>
+                                <a href="{{ route('linea_datos.show', $linea_dato->id) }}" class="btn btn-sm btn-default">Ver</a>
                               </td>
                               @endcan
 
-                              @can ('linea_muestras.edit')
+                              @can ('linea_datos.edit')
                               <td style="padding:0">
-                                <a href="{{ route('linea_muestras.edit', $linea_muestra->id) }}" class="btn btn-sm btn-info">Editar</a>
+                                <a href="{{ route('linea_datos.edit', $linea_dato->id) }}" class="btn btn-sm btn-info">Editar</a>
                               </td>
                               @endcan
 
-                              @can ('linea_muestras.destroy')
+                              @can ('linea_datos.destroy')
                               <td style="padding:0">
-                                {!!Form::open(['route'=>['linea_muestras.destroy',$linea_muestra->id], 'method'=>'DELETE'])!!}
+                                {!!Form::open(['route'=>['linea_datos.destroy',$linea_dato->id], 'method'=>'DELETE'])!!}
                                 <button class="btn btn-sm btn-danger">Eliminar</button> {!!Form::close()!!}
                               </td>
                               @endcan
@@ -88,7 +97,7 @@
                           </tbody>
                         </table>
                       </div>
-                      {{$linea_muestras->render()}}
+                      {{$linea_datos->render()}}
                     </div>
                   </div>
                   <!--  end card  -->
@@ -112,7 +121,7 @@
 
 
 <script type="text/javascript">
-  $('#nav-linea_muestras').addClass('active');
+  $('#nav-linea_datos').addClass('active');
 </script>
 
 </html>

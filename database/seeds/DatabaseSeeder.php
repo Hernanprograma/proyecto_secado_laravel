@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CentrifugasTableSeeder::class);
         $this->call(SimbioticasTableSeeder::class);
         $this->call(LineaMuestraTableSeeder::class);
+        $this->call(LineaDatoTableSeeder::class);
     }
 }

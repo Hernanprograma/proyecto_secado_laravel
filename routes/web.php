@@ -174,3 +174,25 @@ Route::put('linea_muestras/{linea_muestra}', 'LineaMuestraController@update')->n
 
 Route::delete('linea_muestras/{linea_muestra}', 'LineaMuestraController@destroy')->name('linea_muestras.destroy')
 ->middleware('permission:linea_muestras.destroy');
+
+//LineaDatos
+Route::get('linea_datos', 'LineaDatoController@index')->name('linea_datos.index')
+->middleware('permission:linea_datos.index');
+
+Route::get('linea_datos/create', 'LineaDatoController@create')->name('linea_datos.create')
+->middleware('permission:linea_datos.create');
+
+Route::post('linea_datos/store', 'LineaDatoController@store')->name('linea_datos.store')
+->middleware('permission:linea_datos.create');
+
+Route::get('linea_datos/{linea_dato}', 'LineaDatoController@show')->name('linea_datos.show')
+->middleware('permission:linea_datos.show');
+
+Route::get('linea_datos/{linea_dato}/edit', 'LineaDatoController@edit')->name('linea_datos.edit')
+->middleware('permission:linea_datos.edit');
+
+Route::put('linea_datos/{linea_dato}', 'LineaMuestraController@update')->name('linea_datos.update')
+->middleware('permission:linea_datos.edit');
+
+Route::delete('linea_datos/{linea_dato}', 'LineaMuestraController@destroy')->name('linea_datos.destroy')
+->middleware('permission:linea_datos.destroy');

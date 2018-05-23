@@ -81,7 +81,14 @@ Tip 2: you can change the color of the active button using the data-active-color
         <a href="<?php echo e(route('simbioticas.index')); ?>">
               <i class="ti-infinite"></i>
               <p>Simbiotica</p>
-
+            </a>
+      </li>
+      <?php endif; ?>
+      <?php if (\Shinobi::can('linea_datos.index')): ?>
+      <li id="nav-linea_datos">
+        <a href="<?php echo e(route('linea_datos.index')); ?>">
+              <i class="ti-rocket"></i>
+              <p>Datos de la linea</p>
             </a>
       </li>
       <?php endif; ?>

@@ -81,7 +81,14 @@ Tip 2: you can change the color of the active button using the data-active-color
         <a href="{{route('simbioticas.index')}}">
               <i class="ti-infinite"></i>
               <p>Simbiotica</p>
-
+            </a>
+      </li>
+      @endcan
+      @can ('linea_datos.index')
+      <li id="nav-linea_datos">
+        <a href="{{route('linea_datos.index')}}">
+              <i class="ti-rocket"></i>
+              <p>Datos de la linea</p>
             </a>
       </li>
       @endcan

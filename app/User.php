@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Linea_muestra');
     }
+    // Relación con linea_dato
+    public function lineadatos()
+    {
+        return $this->hasMany('App\Linea_dato');
+    }
 }
