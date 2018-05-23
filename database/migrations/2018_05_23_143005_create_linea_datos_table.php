@@ -40,7 +40,7 @@ class CreateLineaDatosTable extends Migration
             $table->string('variador_mecanico');
             $table->string('vueltas_bomba');
             $table->string('temp_aceite_ent_intercambiador');
-            $table->string('temp_aceite_salida_intercambiador');
+            $table->string('temp_aceite_salida_inter');
             $table->string('temp_agua_entrada_condensador');
             $table->string('temp_agua_salida_condensador');
             $table->string('caudal_agua_a_condensador');
@@ -65,7 +65,7 @@ class CreateLineaDatosTable extends Migration
             $table->string('observaciones');
             $table->unsignedInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
-            
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }

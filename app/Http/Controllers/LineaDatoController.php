@@ -26,7 +26,9 @@ class LineaDatoController extends Controller
      */
     public function create()
     {
-        return view('linea_datos.create');
+        $linea_dato=Linea_dato::orderBy('created_at', 'desc')->first();
+        //dd($linea_dato);
+        return view('linea_datos.create', compact('linea_dato'));
     }
 
     /**

@@ -25,14 +25,14 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Muestras de línea</h4>
-                      <p class="category">Editar datos y muestras de la línea</p>
+                      <h4 class="card-title">Datos de línea</h4>
+                      <p class="category">Editar datos </p>
                     </div>
                     <div class="card-content">
 
-                      {!!Form::model($linea_muestra, ['route'=> ['linea_muestras.update',$linea_muestra], 'method'=>'PUT'])!!}
+                      {!!Form::model($linea_dato, ['route'=> ['linea_datos.update',$linea_dato], 'method'=>'PUT'])!!}
 
-                      @include('linea_muestras.partials.form') {!!Form::close()!!}
+                      @include('linea_datos.partials.form') {!!Form::close()!!}
 
 
 

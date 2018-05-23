@@ -32,7 +32,7 @@ class Linea_dato extends Model
   'variador_mecanico',
   'vueltas_bomba',
   'temp_aceite_ent_intercambiador',
-  'temp_aceite_salida_intercambiador',
+  'temp_aceite_salida_inter',
   'temp_agua_entrada_condensador',
   'temp_agua_salida_condensador',
   'caudal_agua_a_condensador',
