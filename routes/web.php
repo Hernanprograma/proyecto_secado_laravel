@@ -196,3 +196,24 @@ Route::put('linea_datos/{linea_dato}', 'LineaMuestraController@update')->name('l
 
 Route::delete('linea_datos/{linea_dato}', 'LineaMuestraController@destroy')->name('linea_datos.destroy')
 ->middleware('permission:linea_datos.destroy');
+
+
+
+//MarchaCentrifugas
+Route::get('marcha_centrifugas', 'MarchaCentrifugaController@index')->name('marcha_centrifugas.index')
+->middleware('permission:marcha_centrifugas.index');
+
+Route::get('marcha_centrifugas/create', 'MarchaCentrifugaController@create')->name('marcha_centrifugas.create')
+->middleware('permission:marcha_centrifugas.create');
+
+Route::post('marcha_centrifugas/store', 'MarchaCentrifugaController@store')->name('marcha_centrifugas.store')
+->middleware('permission:marcha_centrifugas.create');
+
+Route::get('marcha_centrifugas/{marcha_centrifuga}/edit', 'MarchaCentrifugaController@edit')->name('marcha_centrifugas.edit')
+->middleware('permission:marcha_centrifugas.edit');
+
+Route::put('marcha_centrifugas/{marcha_centrifuga}', 'MarchaCentrifugaController@update')->name('marcha_centrifugas.update')
+->middleware('permission:marcha_centrifugas.edit');
+
+Route::delete('marcha_centrifugas/{marcha_centrifuga}', 'MarchaCentrifugaController@destroy')->name('marcha_centrifugas.destroy')
+->middleware('permission:marcha_centrifugas.destroy');

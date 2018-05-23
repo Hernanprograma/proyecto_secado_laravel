@@ -4,12 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Simbiotica extends Model
+class Marcha_centrifuga extends Model
 {
     protected $fillable=[
-  'caudal','totalizado','fecha','hora','incidencias','user_id',
-                    ];
-
+      'centrifuga',
+      'estado',
+      'fecha',
+      'hora',
+      'incidencias',
+      'user_id',
+    ];
 
     // Relación
     public function user()

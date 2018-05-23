@@ -92,6 +92,14 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
+      <?php if (\Shinobi::can('marcha_centrifugas.index')): ?>
+      <li id="nav-marcha_centrifugas">
+        <a href="<?php echo e(route('marcha_centrifugas.index')); ?>">
+              <i class="ti-rocket"></i>
+              <p>Estado de centrifugas</p>
+            </a>
+      </li>
+      <?php endif; ?>
     </ul>
 
     </li>
