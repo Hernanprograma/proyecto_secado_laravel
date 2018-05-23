@@ -34,4 +34,16 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Centrifuga');
     }
+
+    // Relación con simbioticas
+    public function simbioticas()
+    {
+        return $this->hasMany('App\Simbiotica');
+    }
+
+    // Relación con linea_muestra
+    public function lineamuestras()
+    {
+        return $this->hasMany('App\Linea_muestra');
+    }
 }

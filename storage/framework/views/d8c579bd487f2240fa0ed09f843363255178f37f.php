@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
-@include('partials.head')
+<?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <body>
   <div class="wrapper">
     <!--BARRA IZQUIERDA DE MENUS ......esta en la ruta views/partials/sidebar-->
-    @include('partials.sidebar')
+    <?php echo $__env->make('partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     <div class="main-panel">
       <!--BARRA SUPERIOR DE MENUS ......esta en la ruta views/partials/sidebar-->
-      @include('partials.defaultbar')
+      <?php echo $__env->make('partials.defaultbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
       <div class="content">
         <div class="container-fluid">
@@ -40,13 +40,13 @@
                         <tbody>
 
                           <tr>
-                            <tr><td><strong>ID</strong></td><td>{{$simbiotica->id}} </td></tr>
-                            <tr><td><strong>Caudal </strong></td><td>{{$simbiotica->caudal}} </td></tr>
-                            <tr><td><strong>Totalizado </strong></td><td>{{$simbiotica->totalizado}} </td></tr>
-                            <tr><td><strong>Incidencias </strong></td><td>{{$simbiotica->incidencias}} </td></tr>
-                            <tr><td><strong>Fecha </strong></td><td>{{Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')}}</td></tr>
-                            <tr><td><strong>Hora </strong></td><td>{{Carbon\Carbon::parse($simbiotica->hora)->format('H:i')}}</td></tr>
-                            <tr><td><strong>Crea registro</strong></td><td>@isset($simbiotica->user->name){{$simbiotica->user->name}} @endisset</td></tr>
+                            <tr><td><strong>ID</strong></td><td><?php echo e($simbiotica->id); ?> </td></tr>
+                            <tr><td><strong>Caudal </strong></td><td><?php echo e($simbiotica->caudal); ?> </td></tr>
+                            <tr><td><strong>Totalizado </strong></td><td><?php echo e($simbiotica->totalizado); ?> </td></tr>
+                            <tr><td><strong>Incidencias </strong></td><td><?php echo e($simbiotica->incidencias); ?> </td></tr>
+                            <tr><td><strong>Fecha </strong></td><td><?php echo e(Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')); ?></td></tr>
+                            <tr><td><strong>Hora </strong></td><td><?php echo e(Carbon\Carbon::parse($simbiotica->hora)->format('H:i')); ?></td></tr>
+                            <tr><td><strong>Crea registro</strong></td><td><?php if(isset($simbiotica->user->name)): ?><?php echo e($simbiotica->user->name); ?> <?php endif; ?></td></tr>
 
                           </tr>
 
@@ -70,12 +70,12 @@
           </div>
 
 
-          @include('partials.footer')
+          <?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
       </div>
 </body>
 
-@include('partials.scripts')
+<?php echo $__env->make('partials.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 <!-- Scripts Charts-->

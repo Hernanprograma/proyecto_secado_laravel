@@ -1,41 +1,4 @@
-{{--
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Detalles Muestra de centífuga
-        </div>
-        <div class="panel-body">
-
-          <tr><strong>Centrifuga</strong>{{$centrifuga->centrifuga}} </td></tr>
-          <tr><strong>Entrada </strong>{{$centrifuga->entrada}} </td></tr>
-          <tr><strong>Salida </strong>{{$centrifuga->salida}} </td></tr>
-          <tr><strong>Consigna </strong>{{$centrifuga->consigna}} </td></tr>
-          <tr><strong>VA </strong>{{$centrifuga->va}} </td></tr>
-          <tr><strong>VR </strong>{{$centrifuga->vr}} </td></tr>
-          <tr><strong>Par </strong>{{$centrifuga->par}} </td></tr>
-          <tr><strong>Temp entrada centrifuga </strong>{{$centrifuga->t_entrada}} </td></tr>
-          <tr><strong>Temp_salida centrifuga </strong>{{$centrifuga->t_salida}} </td></tr>
-          <tr><strong>Vibracion centrifuga </strong>{{$centrifuga->vibracion}} </td></tr>
-          <tr><strong>Caudal entrada a centrifuga </strong>{{$centrifuga->caudal_ent}} </td></tr>
-          <tr><strong>Marca de poli </strong>{{$centrifuga->marcapoli}} </td></tr>
-          <tr><strong>Caudal de poli </strong>{{$centrifuga->caudal_poli}} </td></tr>
-          <tr><strong>Aspecto escurrido </strong>{{$centrifuga->aspecto}} </td></tr>
-          <tr><strong>Fecha </strong>{{Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')}}</td></tr>
-          <tr><strong>Hora </strong>{{Carbon\Carbon::parse($centrifuga->hora)->format('H:i')}}</td></tr>
-          <tr><strong>Usuario dato </strong>{{$centrifuga->user->name}} </td></tr>
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection --}}
 
 <!doctype html>
 <html lang="es">
@@ -63,8 +26,8 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Centífugas</h4>
-                      <p class="category">Detalles de muestra de la centrífuga</p>
+                      <h4 class="card-title">Muestras de linea</h4>
+                      <p class="category">Lista de muestras de la linea</p>
                     </div>
                     <div class="card-content">
 

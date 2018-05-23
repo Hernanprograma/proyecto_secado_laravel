@@ -151,3 +151,26 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('simbioticas/{simbiotica}', 'SimbioticaController@destroy')->name('simbioticas.destroy')
 ->middleware('permission:simbioticas.destroy');
 });
+
+
+//LineaMuestras
+Route::get('linea_muestras', 'LineaMuestraController@index')->name('linea_muestras.index')
+->middleware('permission:linea_muestras.index');
+
+Route::get('linea_muestras/create', 'LineaMuestraController@create')->name('linea_muestras.create')
+->middleware('permission:linea_muestras.create');
+
+Route::post('linea_muestras/store', 'LineaMuestraController@store')->name('linea_muestras.store')
+->middleware('permission:linea_muestras.create');
+
+Route::get('linea_muestras/{linea_muestra}', 'LineaMuestraController@show')->name('linea_muestras.show')
+->middleware('permission:linea_muestras.show');
+
+Route::get('linea_muestras/{linea_muestra}/edit', 'LineaMuestraController@edit')->name('linea_muestras.edit')
+->middleware('permission:linea_muestras.edit');
+
+Route::put('linea_muestras/{linea_muestra}', 'LineaMuestraController@update')->name('linea_muestras.update')
+->middleware('permission:linea_muestras.edit');
+
+Route::delete('linea_muestras/{linea_muestra}', 'LineaMuestraController@destroy')->name('linea_muestras.destroy')
+->middleware('permission:linea_muestras.destroy');

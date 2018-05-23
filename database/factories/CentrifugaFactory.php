@@ -20,7 +20,7 @@ $factory->define(App\Centrifuga::class, function (Faker $faker) {
       'marcapoli'=>'Tefloc TE80z',
       'caudal_poli'=>$faker->numberBetween(2000, 4000),
       'aspecto'=>'bien',
-      'fecha'=>$faker->dateTimeThisYear($max = 'now', $timezone = 'Europe/Paris', $format = 'd-m-Y'),
+      'fecha'=>$faker->dateTimeThisYear($max = 'now', $timezone = 'Europe/Paris', $format = 'd-m-Y')->format('Y-m-d'),
       'hora'=>$faker->time($format = 'H:i', $max = 'now', $timezone = 'Europe/Paris') ,
 
       'user_id'=>App\User::all()->random()->id,

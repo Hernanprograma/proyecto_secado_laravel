@@ -65,6 +65,15 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
+      @can ('simbioticas.index')
+      <li id="nav-simbio">
+        <a href="{{route('simbioticas.index')}}">
+              <i class="ti-infinite"></i>
+              <p>Simbiotica</p>
+
+            </a>
+      </li>
+      @endcan
     </ul>
 
     </li>

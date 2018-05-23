@@ -45,25 +45,27 @@
                                   <table class="table">
                                     <thead>
                                       <tr>
-                                        <th width="10px">ID</th>
-                                        <th>Centrífuga</th>
+
+                                        <th>Operario</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
-                                        <th>Entrada </th>
-                                        <th>Salida</th>
+                                        <th>Caudal </th>
+                                        <th>Totalizado</th>
+                                        <th>Incidencias</th>
                                         <th colspan="3">&nbsp;</th>
                                       </tr>
                                     </thead>
                                       <tbody>
                                         @foreach ($simbioticas as $simbiotica)
                                         <tr>
-                                          <td>{{$simbiotica->id}}</td>
-                                          <td>{{$simbiotica->simbiotica}}</td>
-                                          <td>{{Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')}}</td>
 
+
+                                          <td>@isset($simbiotica->user->name){{$simbiotica->user->name}} @endisset</td>
+                                          <td>{{Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')}}</td>
                                           <td>{{$simbiotica->hora}}</td>
-                                          <td>{{$simbiotica->entrada}}</td>
-                                          <td>{{$simbiotica->salida}}</td>
+                                          <td>{{$simbiotica->caudal}}</td>
+                                          <td>{{$simbiotica->totalizado}}</td>
+                                          <td>{{$simbiotica->incidencias}}</td>
                                           @can ('simbioticas.show')
                                             <td style="padding:0">
                                             <a href="{{ route('simbioticas.show', $simbiotica->id) }}" class="btn btn-sm btn-default">Ver</a>

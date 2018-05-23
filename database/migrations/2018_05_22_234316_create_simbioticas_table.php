@@ -15,7 +15,14 @@ class CreateSimbioticasTable extends Migration
     {
         Schema::create('simbioticas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('caudal');
+            $table->string('totalizado');
+            $table->string('fecha');
+            $table->string('hora');
+            $table->string('incidencias');
+            $table->unsignedInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

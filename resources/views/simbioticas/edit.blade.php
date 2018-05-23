@@ -1,25 +1,4 @@
-{{--
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Editar Muestra de centrífuga
-        </div>
-        <div class="panel-body">
-          {!!Form::model($centrifuga, ['route'=> ['centrifugas.update',$centrifuga], 'method'=>'PUT'])!!}
-
-          @include('centrifugas.partials.form') {!!Form::close()!!}
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection --}}
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -46,14 +25,14 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Centífugas</h4>
-                      <p class="category">Editar datos y muestras de las centrífugas</p>
+                      <h4 class="card-title">Simbiótica</h4>
+                      <p class="category">Editar los datos</p>
                     </div>
                     <div class="card-content">
 
-                      {!!Form::model($centrifuga, ['route'=> ['centrifugas.update',$centrifuga], 'method'=>'PUT'])!!}
+                      {!!Form::model($simbiotica, ['route'=> ['simbioticas.update',$simbiotica], 'method'=>'PUT'])!!}
 
-                      @include('centrifugas.partials.form') {!!Form::close()!!}
+                      @include('simbioticas.partials.form') {!!Form::close()!!}
 
 
 

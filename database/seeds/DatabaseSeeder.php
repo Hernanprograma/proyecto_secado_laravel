@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Linea_muestra;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PermissionsTableSeeder::class);
         $this->call(Poli_marcasTableSeeder::class);
         $this->call(CentrifugasTableSeeder::class);
+        $this->call(SimbioticasTableSeeder::class);
+        $this->call(LineaMuestraTableSeeder::class);
     }
 }

@@ -1,16 +1,17 @@
+
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
-@include('partials.head')
+<?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <body>
   <div class="wrapper">
     <!--BARRA IZQUIERDA DE MENUS ......esta en la ruta views/partials/sidebar-->
-    @include('partials.sidebar')
+    <?php echo $__env->make('partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     <div class="main-panel">
       <!--BARRA SUPERIOR DE MENUS ......esta en la ruta views/partials/sidebar-->
-      @include('partials.defaultbar')
+      <?php echo $__env->make('partials.defaultbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
       <div class="content">
         <div class="container-fluid">
@@ -24,14 +25,16 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Centífugas</h4>
-                      <p class="category">Inserta un nuevo registro</p>
+                      <h4 class="card-title">Simbiótica</h4>
+                      <p class="category">Editar los datos</p>
                     </div>
                     <div class="card-content">
 
-                      {!!Form::open(['route'=> 'centrifugas.store'])!!}
-                      @include('centrifugas.partials.form')
-                      {!!Form::close()!!}
+                      <?php echo Form::model($simbiotica, ['route'=> ['simbioticas.update',$simbiotica], 'method'=>'PUT']); ?>
+
+
+                      <?php echo $__env->make('simbioticas.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> <?php echo Form::close(); ?>
+
 
 
 
@@ -46,12 +49,12 @@
           </div>
 
 
-          @include('partials.footer')
+          <?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
       </div>
 </body>
 
-@include('partials.scripts')
+<?php echo $__env->make('partials.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 <!-- Scripts Charts-->
