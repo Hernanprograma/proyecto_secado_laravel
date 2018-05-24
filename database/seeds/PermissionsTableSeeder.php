@@ -224,54 +224,52 @@ class PermissionsTableSeeder extends Seeder
     'slug' =>'linea_datos.destroy',
     'description' =>'Eliminar cualquier registro de datos de la linea del sistema',
     ]);
-        //Muestras datos
-        Permission::create([
-'name' =>'Ver lista de datos de la linea',
-'slug' =>'linea_datos.index',
-'description' =>'Lista y navega por todas los registros de datos de la linea en el sistema',
-]);
-        Permission::create([
-'name' =>'Ver detalle de las datos de la linea',
-'slug' =>'linea_datos.show',
-'description' =>'Ver en detalle cada una de los registros de datos de la linea  en el sistema',
-]);
-        Permission::create([
-'name' =>'Editar los datos de la linea',
-'slug' =>'linea_datos.edit',
-'description' =>'Editar cualquier registro de datos de la linea del sistema',
-]);
-        Permission::create([
-'name' =>'Creacion  de datos de la linea',
-'slug' =>'linea_datos.create',
-'description' =>'Crea una registro de datos de la linea en el sistema',
-]);
-        Permission::create([
-'name' =>'Eliminar datos de la linea',
-'slug' =>'linea_datos.destroy',
-'description' =>'Eliminar cualquier registro de datos de la linea del sistema',
-]);
+
 
         //Marcha paro centrifugas
         Permission::create([
-'name' =>'Ver lista de los estados de las centrifugas',
-'slug' =>'marcha_centrifugas.index',
-'description' =>'Lista y navega por todas los registros de los estados de las centrifugas en el sistema',
-]);
+      'name' =>'Ver lista de los estados de las centrifugas',
+      'slug' =>'marcha_centrifugas.index',
+      'description' =>'Lista y navega por todas los registros de los estados de las centrifugas en el sistema',
+    ]);
 
         Permission::create([
-'name' =>'Editar el estado de las centrifugas',
-'slug' =>'marcha_centrifugas.edit',
-'description' =>'Editar cualquier registro de los estados de las centrifugas del sistema',
-]);
+      'name' =>'Editar el estado de las centrifugas',
+      'slug' =>'marcha_centrifugas.edit',
+      'description' =>'Editar cualquier registro de los estados de las centrifugas del sistema',
+    ]);
         Permission::create([
-'name' =>'Creacion  de los estados de las centrifugas',
-'slug' =>'marcha_centrifugas.create',
-'description' =>'Crea una registro de los estados de las centrifugas en el sistema',
-]);
+      'name' =>'Creacion  de los estados de las centrifugas',
+      'slug' =>'marcha_centrifugas.create',
+      'description' =>'Crea una registro de los estados de las centrifugas en el sistema',
+    ]);
         Permission::create([
-'name' =>'Eliminar datos del estado de las centrifugas',
-'slug' =>'marcha_centrifugas.destroy',
-'description' =>'Eliminar cualquier registro de los estados de las centrifugas del sistema',
-]);
+      'name' =>'Eliminar datos del estado de las centrifugas',
+      'slug' =>'marcha_centrifugas.destroy',
+      'description' =>'Eliminar cualquier registro de los estados de las centrifugas del sistema',
+      ]);
+
+        //Gasto de poli
+        Permission::create([
+      'name' =>'Ver lista de los sacos de poli gastados',
+      'slug' =>'gasto_polis.index',
+      'description' =>'Lista y navega por todas los registros de los sacos de poli gastados en el sistema',
+      ]);
+
+        Permission::create([
+      'name' =>'Editar el estado de los sacos gastados',
+      'slug' =>'gasto_polis.edit',
+      'description' =>'Editar cualquier registro de los sacos de poli gastados del sistema',
+      ]);
+        Permission::create([
+      'name' =>'Creacion  de los sacos de poli gastados',
+      'slug' =>'gasto_polis.create',
+      'description' =>'Crea una registro de los sacos de poli gastados en el sistema',
+      ]);
+        Permission::create([
+      'name' =>'Eliminar datos de sacos de poli gastados',
+      'slug' =>'gasto_polis.destroy',
+      'description' =>'Eliminar cualquier registro de los sacos de poli gastados del sistema',
+      ]);
     }
 }

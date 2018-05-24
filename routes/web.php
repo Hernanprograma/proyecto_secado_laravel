@@ -217,3 +217,23 @@ Route::put('marcha_centrifugas/{marcha_centrifuga}', 'MarchaCentrifugaController
 
 Route::delete('marcha_centrifugas/{marcha_centrifuga}', 'MarchaCentrifugaController@destroy')->name('marcha_centrifugas.destroy')
 ->middleware('permission:marcha_centrifugas.destroy');
+
+
+//GastoPolis
+Route::get('gasto_polis', 'GastoPoliController@index')->name('gasto_polis.index')
+->middleware('permission:gasto_polis.index');
+
+Route::get('gasto_polis/create', 'GastoPoliController@create')->name('gasto_polis.create')
+->middleware('permission:gasto_polis.create');
+
+Route::post('gasto_polis/store', 'GastoPoliController@store')->name('gasto_polis.store')
+->middleware('permission:gasto_polis.create');
+
+Route::get('gasto_polis/{gasto_poli}/edit', 'GastoPoliController@edit')->name('gasto_polis.edit')
+->middleware('permission:gasto_polis.edit');
+
+Route::put('gasto_polis/{gasto_poli}', 'GastoPoliController@update')->name('gasto_polis.update')
+->middleware('permission:gasto_polis.edit');
+
+Route::delete('gasto_polis/{gasto_poli}', 'GastoPoliController@destroy')->name('gasto_polis.destroy')
+->middleware('permission:gasto_polis.destroy');

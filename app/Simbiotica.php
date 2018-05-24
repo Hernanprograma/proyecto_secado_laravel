@@ -10,7 +10,6 @@ class Simbiotica extends Model
   'caudal','totalizado','fecha','hora','incidencias','user_id',
                     ];
 
-
     // Relación
     public function user()
     {

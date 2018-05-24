@@ -1,15 +1,15 @@
 <div class="form-group">
-  {{Form::label('linea','Linea')}}{{ Form::select('linea', ['A'=>'A','B'=>'B'], 'A', ['class'=>'form-control']) }}
+  {{Form::label('linea','Linea')}}{{ Form::select('linea', ['A'=>'A','B'=>'B'], null, ['class'=>'form-control']) }}
 </div>
 
 <div class="form-group">
   {{Form::label('fecha','Fecha')}}
-{{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control']) }}
+{{ Form::date('fecha',null, ['class'=>'form-control']) }}
 </div>
 
 <div class="form-group">
 {{Form::label('hora','Hora')}}
-{{ Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
+{{ Form::time('hora',null, ['class'=>'form-control']) }}
 </div>
 
 <div class="form-group">

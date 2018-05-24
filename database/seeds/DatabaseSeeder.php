@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LineaMuestraTableSeeder::class);
         $this->call(LineaDatoTableSeeder::class);
         $this->call(MarchaCentrifugaTableSeeder::class);
+        $this->call(GastoPoliTableSeeder::class);
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Poli_marca;
@@ -17,7 +16,6 @@ class PoliMarcaController extends Controller
         $poli_marcas=Poli_marca::orderBy('created_at', 'desc')->paginate();
         return view('poli_marcas.index', compact('poli_marcas'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +25,6 @@ class PoliMarcaController extends Controller
     {
         return view('poli_marcas.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,12 +33,14 @@ class PoliMarcaController extends Controller
      */
     public function store(Request $request)
     {
-        $poli_marca=Poli_marca::create($request->all());
+        $poli_marca=new Poli_marca($request->all());
+        $poli_marca->user_id = Auth::user()->id;
+        $simbiotica->save();
 
+        $poli_marca=Poli_marca::create($request->all());
         return redirect()->route('poli_marcas.index', $poli_marca->id)
         ->with('info', 'Marca Creada con éxito');
     }
-
     /**
      * Display the specified resource.
      *
@@ -52,7 +51,6 @@ class PoliMarcaController extends Controller
     {
         return view('poli_marcas.show', compact('poli_marca'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -63,7 +61,6 @@ class PoliMarcaController extends Controller
     {
         return view('poli_marcas.edit', compact('poli_marca'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -77,7 +74,6 @@ class PoliMarcaController extends Controller
         return redirect()->route('poli_marcas.index', $poli_marca->id)
         ->with('info', 'Campos editados con éxito');
     }
-
     /**
      * Remove the specified resource from storage.
      *

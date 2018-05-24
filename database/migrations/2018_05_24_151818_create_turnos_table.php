@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePoliMarcasTable extends Migration
+class CreateTurnosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreatePoliMarcasTable extends Migration
      */
     public function up()
     {
-        Schema::create('poli_marcas', function (Blueprint $table) {
+        Schema::create('turnos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('peso');
-            $table->string('precio');
-            $table->unsignedInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 
@@ -31,6 +26,6 @@ class CreatePoliMarcasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('poli_marcas');
+        Schema::dropIfExists('turnos');
     }
 }

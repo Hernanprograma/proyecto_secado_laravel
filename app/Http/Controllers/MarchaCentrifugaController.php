@@ -26,7 +26,8 @@ class MarchaCentrifugaController extends Controller
      */
     public function create()
     {
-        return view('marcha_centrifugas.create');
+        $checked='Parada';
+        return view('marcha_centrifugas.create', compact('checked'));
     }
 
     /**
@@ -66,7 +67,8 @@ class MarchaCentrifugaController extends Controller
      */
     public function edit(Marcha_centrifuga $marcha_centrifuga)
     {
-        return view('marcha_centrifugas.edit', compact('marcha_centrifuga'));
+        $checked=$marcha_centrifuga->estado;
+        return view('marcha_centrifugas.edit', compact('marcha_centrifuga', 'checked'));
     }
 
     /**

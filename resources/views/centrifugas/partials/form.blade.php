@@ -1,16 +1,16 @@
 <div class="form-group">
   {{Form::label('fecha','Fecha')}}
-{{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control']) }}
+{{ Form::date('fecha', null, ['class'=>'form-control']) }}
 </div>
 
 <div class="form-group">
 {{Form::label('hora','Hora')}}
-{{ Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
+{{ Form::time('hora',null, ['class'=>'form-control']) }}
 </div>
 
 
 <div class="form-group">
-  {{Form::label('centrifuga','Centrifuga')}}{{ Form::select('centrifuga', ['A'=>'A','B'=>'B','C'=>'C'], 'A', ['class'=>'form-control']) }}
+  {{Form::label('centrifuga','Centrifuga')}}{{ Form::select('centrifuga', ['A'=>'A','B'=>'B','C'=>'C'], null, ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
   {{Form::label('entrada','A deshidratar')}} {{Form::number('entrada',null,['class'=>'form-control','step'=>'any'])}}

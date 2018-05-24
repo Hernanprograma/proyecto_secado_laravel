@@ -100,6 +100,15 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
+      @can ('gasto_polis.index')
+      <li id="nav-gasto_polis">
+        <a href="{{route('gasto_polis.index')}}">
+              <i class="ti-infinite"></i>
+              <p>Gasto de Poli</p>
+            </a>
+      </li>
+      @endcan
+
     </ul>
 
     </li>
