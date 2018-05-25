@@ -1,25 +1,4 @@
-{{--
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Marcas de Poli
-        </div>
-        <div class="panel-body">
-          <p><strong>Marca: </strong>{{$poli_marca->name}} </p>
-          <p><strong>Precio: </strong>{{$poli_marca->precio}} </p>
-          <p><strong>Peso: </strong>{{$poli_marca->peso}} </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection --}}
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -50,13 +29,12 @@
                       <p class="category">Detalles de muestra de la centrífuga</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
 
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
-
-
-
-
-
+                      </div>
 
                       <table  class="table table-striped table-hover">
                         <thead>

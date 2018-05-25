@@ -29,6 +29,12 @@
                       <p class="category">Editar rol.</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+
+                      </div>
 
                       {!!Form::model($role, ['route'=> ['roles.update',$role], 'method'=>'PUT'])!!}
 

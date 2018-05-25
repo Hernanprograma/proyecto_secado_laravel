@@ -28,6 +28,12 @@
                       <p class="category">Añade un saco</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+
+                      </div>
 
                       {!!Form::open(['route'=> 'gasto_polis.store'])!!}
                       @include('gasto_polis.partials.form')

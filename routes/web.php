@@ -237,3 +237,42 @@ Route::put('gasto_polis/{gasto_poli}', 'GastoPoliController@update')->name('gast
 
 Route::delete('gasto_polis/{gasto_poli}', 'GastoPoliController@destroy')->name('gasto_polis.destroy')
 ->middleware('permission:gasto_polis.destroy');
+
+
+//Turnos
+Route::get('turnos', 'TurnoController@index')->name('turnos.index')
+->middleware('permission:turnos.index');
+
+Route::get('turnos/create', 'TurnoController@create')->name('turnos.create')
+->middleware('permission:turnos.create');
+
+Route::post('turnos/store', 'TurnoController@store')->name('turnos.store')
+->middleware('permission:turnos.create');
+
+Route::get('turnos/{turno}/edit', 'TurnoController@edit')->name('turnos.edit')
+->middleware('permission:turnos.edit');
+
+Route::put('turnos/{turno}', 'TurnoController@update')->name('turnos.update')
+->middleware('permission:turnos.edit');
+
+Route::delete('turnos/{turno}', 'TurnoController@destroy')->name('turnos.destroy')
+->middleware('permission:turnos.destroy');
+
+//Tareas
+Route::get('tareas', 'TareaController@index')->name('tareas.index')
+->middleware('permission:tareas.index');
+
+Route::get('tareas/create{turno}', 'TareaController@create')->name('tareas.create')
+->middleware('permission:tareas.create');
+
+Route::post('tareas/store', 'TareaController@store')->name('tareas.store')
+->middleware('permission:tareas.create');
+
+Route::get('tareas/{tarea}/edit', 'TareaController@edit')->name('tareas.edit')
+->middleware('permission:tareas.edit');
+
+Route::put('tareas/{tarea}', 'TareaController@update')->name('tareas.update')
+->middleware('permission:tareas.edit');
+
+Route::delete('tareas/{tarea}', 'TareaController@destroy')->name('tareas.destroy')
+->middleware('permission:tareas.destroy');

@@ -30,6 +30,12 @@
                       <p class="category">Detalles de muestra de la centrífuga</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">back</a>
+                        
+                      </div>
 
                         <table  class="table table-striped table-hover">
                         <thead>
@@ -58,7 +64,7 @@
                             <tr><td><strong>Aspecto escurrido </strong></td><td><?php echo e($centrifuga->aspecto); ?> </td></tr>
                             <tr><td><strong>Fecha </strong></td><td><?php echo e(Carbon\Carbon::parse($centrifuga->fecha)->format('d-m-Y')); ?></td></tr>
                             <tr><td><strong>Hora </strong></td><td><?php echo e(Carbon\Carbon::parse($centrifuga->hora)->format('H:i')); ?></td></tr>
-                            <tr><td><strong>Usuario dato </strong></td><td><?php if(isset($centrifuga->user->name)): ?><?php echo e($centrifuga->user->name); ?> <?php endif; ?></td></tr>
+                            <tr><td><strong>Crea registro </strong></td><td><?php if(isset($centrifuga->user->name)): ?><?php echo e($centrifuga->user->name); ?> <?php endif; ?></td></tr>
 
                           </tr>
 

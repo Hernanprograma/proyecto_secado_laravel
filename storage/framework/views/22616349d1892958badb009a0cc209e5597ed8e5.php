@@ -14,18 +14,11 @@
 </div>
 
 <div class="form-group">
-    <?php echo e(Form::label('Marcas')); ?>
-
-    <?php echo e(Form::select('marcas', $marcas->pluck('name','id'),$selected , array('class'=>'form-control','required'=>'required'))); ?>
+  <?php echo e(Form::label('descripcion','Tarea')); ?> <?php echo e(Form::text('descripcion',null,['class'=>'form-control'])); ?>
 
 </div>
 
-
 <div class="form-group">
-  <?php echo e(Form::label('incidencias','Incidencias')); ?> <?php echo e(Form::textarea('incidencias',null,['class'=>'form-control'])); ?>
-
-</div>
-<div class="form-group">
-  <?php echo e(Form::submit('Guardar',['class'=>'btn btn-sm btn-primary'])); ?>
+  <?php echo e(Form::submit('Crear tarea',['class'=>'btn btn-sm btn-primary'])); ?>
 
 </div>

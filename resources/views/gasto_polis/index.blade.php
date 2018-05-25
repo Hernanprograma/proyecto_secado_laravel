@@ -32,6 +32,7 @@
                                   <div class="toolbar">
 
                                       <!--Here you can write extra buttons/actions for the toolbar-->
+                                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
                                         @can ('gasto_polis.create')
                                         <a href="{{route('gasto_polis.create')}}" class="btn btn-primary pull-right">

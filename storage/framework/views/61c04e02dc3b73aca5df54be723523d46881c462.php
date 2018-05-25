@@ -21,17 +21,17 @@
           <div class="content">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="card">
                     <div class="card-header">
-                      <h4 class="card-title">Sacos de polielectrolito</h4>
-                      <p class="category">Añade un saco</p>
+                      <h4 class="card-title">Tareas</h4>
+                      <p class="category">Añade una tarea</p>
                     </div>
                     <div class="card-content">
 
-                      <?php echo Form::open(['route'=> 'gasto_polis.store']); ?>
+                      <?php echo Form::open(['route'=> 'tareas.store']); ?>
 
-                      <?php echo $__env->make('gasto_polis.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                      <?php echo $__env->make('tareas.partials.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                       <?php echo Form::close(); ?>
 
 
@@ -41,6 +41,11 @@
                   </div>
                   <!--  end card  -->
                 </div>
+                <div class="col-md-6">
+                </div>
+
+
+
                 <!-- end col-md-12 -->
               </div>
               <!-- end row -->
@@ -60,7 +65,7 @@
 
 
 <script type="text/javascript">
-  $('#nav-gasto_polis').addClass('active');
+  $('#nav-tareas').addClass('active');
 </script>
 
 </html>

@@ -32,6 +32,7 @@
                                   <div class="toolbar">
 
                                       <!--Here you can write extra buttons/actions for the toolbar-->
+                                      <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
                                         @can ('simbioticas.create')
                                         <a href="{{route('simbioticas.create')}}" class="btn btn-primary pull-right">

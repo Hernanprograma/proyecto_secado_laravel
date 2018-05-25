@@ -31,6 +31,7 @@
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                         <?php if (\Shinobi::can('linea_datos.create')): ?>
                         <a href="<?php echo e(route('linea_datos.create')); ?>" class="btn btn-primary pull-right">

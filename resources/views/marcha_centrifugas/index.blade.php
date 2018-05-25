@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -20,85 +19,88 @@
 
 
           <div class="content">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="card">
-                            <div class="card-header">
-	                                <h4 class="card-title">Estado de Centrífugas</h4>
-	                                <p class="category">Edita el estado de las centrífugas</p>
-	                            </div>
-                              <div class="card-content">
-                                  <div class="toolbar">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Estado de Centrífugas</h4>
+                      <p class="category">Edita el estado de las centrífugas</p>
+                    </div>
+                    <div class="card-content">
+                      <div class="toolbar">
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
-                                      <!--Here you can write extra buttons/actions for the toolbar-->
-
-                                        @can ('marcha_centrifugas.create')
-                                        <a href="{{route('marcha_centrifugas.create')}}" class="btn btn-primary pull-right">
+                        @can ('marcha_centrifugas.create')
+                        <a href="{{route('marcha_centrifugas.create')}}" class="btn btn-primary pull-right">
                                                   Crear
                                                 </a>
-                                        @endcan
+                        @endcan
+
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+
+                              <th>Operario</th>
+                              <th>Centrifuga</th>
+                              <th>Fecha</th>
+                              <th>Hora</th>
+                              <th>Estado </th>
+                              <th>Incidencias</th>
+                              <th colspan="3">&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach ($marcha_centrifugas as $marcha_centrifuga)
+                            <tr>
 
 
-                                  </div>
-                                  <div class="table-responsive">
-                                  <table class="table">
-                                    <thead>
-                                      <tr>
-
-                                        <th>Operario</th>
-                                        <th>Centrifuga</th>
-                                        <th>Fecha</th>
-                                        <th>Hora</th>
-                                        <th>Estado </th>
-                                        <th>Incidencias</th>
-                                        <th colspan="3">&nbsp;</th>
-                                      </tr>
-                                    </thead>
-                                      <tbody>
-                                        @foreach ($marcha_centrifugas as $marcha_centrifuga)
-                                        <tr>
+                              <td>
+                                @isset($marcha_centrifuga->user->name){{$marcha_centrifuga->user->name}}
+                                  @endisset</td>
+                                    <td>{{$marcha_centrifuga->centrifuga}}</td>
+                                    <td>{{Carbon\Carbon::parse($marcha_centrifuga->fecha)->format('d-m-Y')}}</td>
+                                    <td>{{$marcha_centrifuga->hora}}</td>
+                                    <td>{{$marcha_centrifuga->estado}}</td>
+                                    <td>{{$marcha_centrifuga->incidencias}}</td>
 
 
-                                          <td>@isset($marcha_centrifuga->user->name){{$marcha_centrifuga->user->name}} @endisset</td>
-                                          <td>{{$marcha_centrifuga->centrifuga}}</td>
-                                          <td>{{Carbon\Carbon::parse($marcha_centrifuga->fecha)->format('d-m-Y')}}</td>
-                                          <td>{{$marcha_centrifuga->hora}}</td>
-                                          <td>{{$marcha_centrifuga->estado}}</td>
-                                          <td>{{$marcha_centrifuga->incidencias}}</td>
+                                    @can ('marcha_centrifugas.edit')
+                                    <td style="padding:0">
+                                      <a href="{{ route('marcha_centrifugas.edit', $marcha_centrifuga->id) }}" class="btn btn-sm btn-info">Editar</a>
+                                    </td>
+                                    @endcan
 
+                                    @can ('marcha_centrifugas.destroy')
+                                    <td style="padding:0">
+                                      {!!Form::open(['route'=>['marcha_centrifugas.destroy',$marcha_centrifuga->id], 'method'=>'DELETE'])!!}
+                                      <button class="btn btn-sm btn-danger">Eliminar</button> {!!Form::close()!!}
+                                    </td>
+                                    @endcan
 
-                                          @can ('marcha_centrifugas.edit')
-                                            <td style="padding:0">
-                                            <a href="{{ route('marcha_centrifugas.edit', $marcha_centrifuga->id) }}" class="btn btn-sm btn-info">Editar</a>
-                                          </td>
-                                          @endcan
+                            </tr>
+                            @endforeach
 
-                                          @can ('marcha_centrifugas.destroy')
-                                          <td style="padding:0">
-                                            {!!Form::open(['route'=>['marcha_centrifugas.destroy',$marcha_centrifuga->id], 'method'=>'DELETE'])!!}
-                                            <button class="btn btn-sm btn-danger">Eliminar</button> {!!Form::close()!!}
-                                          </td>
-                                          @endcan
-
-                                        </tr>
-                                        @endforeach
-
-                                      </tbody>
-                                  </table>
-                                </div>
-                                  {{$marcha_centrifugas->render()}}
-                              </div>
-                          </div><!--  end card  -->
-                      </div> <!-- end col-md-12 -->
-                  </div> <!-- end row -->
+                          </tbody>
+                        </table>
+                      </div>
+                      {{$marcha_centrifugas->render()}}
+                    </div>
+                  </div>
+                  <!--  end card  -->
+                </div>
+                <!-- end col-md-12 -->
               </div>
+              <!-- end row -->
+            </div>
           </div>
 
 
-            @include('partials.footer')
-          </div>
+          @include('partials.footer')
         </div>
+      </div>
 </body>
 
 @include('partials.scripts')

@@ -24,6 +24,14 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
+      <?php if (\Shinobi::can('turnos.index')): ?>
+      <li id="nav-turnos">
+        <a href="<?php echo e(route('turnos.index')); ?>">
+              <i class="ti-infinite"></i>
+              <p>Turnos</p>
+            </a>
+      </li>
+      <?php endif; ?>
       <?php if (\Shinobi::can('roles.index')): ?>
       <li id="nav-roles">
         <a href="<?php echo e(route('roles.index')); ?>">

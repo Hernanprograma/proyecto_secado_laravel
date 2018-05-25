@@ -29,6 +29,8 @@
 	                            </div>
                               <div class="card-content">
                                   <div class="toolbar">
+
+                                    <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
                                     <?php if (\Shinobi::can('permisos.create')): ?>
                                     <a href="<?php echo e(route('permisos.create')); ?>" class="btn btn-primary pull-right">
                                               Crear

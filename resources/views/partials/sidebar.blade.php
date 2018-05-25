@@ -24,6 +24,14 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
+      @can ('turnos.index')
+      <li id="nav-turnos">
+        <a href="{{route('turnos.index')}}">
+              <i class="ti-infinite"></i>
+              <p>Turnos</p>
+            </a>
+      </li>
+      @endcan
       @can ('roles.index')
       <li id="nav-roles">
         <a href="{{route('roles.index')}}">

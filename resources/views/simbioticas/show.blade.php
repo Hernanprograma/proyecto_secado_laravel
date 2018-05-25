@@ -28,6 +28,13 @@
                       <p class="category">Detalle dato de la simbiótica</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+
+                      </div>
+
 
                       <table class="table table-striped table-hover">
                         <thead>

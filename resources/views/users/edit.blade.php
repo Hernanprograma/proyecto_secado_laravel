@@ -29,6 +29,12 @@
                       <p class="category">Editar datos.</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+
+                      </div>
 
                       {!!Form::model($user, ['route'=> ['users.update',$user], 'method'=>'PUT'])!!}
 

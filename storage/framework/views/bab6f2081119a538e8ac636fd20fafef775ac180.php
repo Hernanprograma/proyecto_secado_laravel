@@ -29,13 +29,12 @@
                       <p class="category">Detalles de muestra de la centrífuga</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
 
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
-
-
-
-
-
+                      </div>
 
                       <table  class="table table-striped table-hover">
                         <thead>

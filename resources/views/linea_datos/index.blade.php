@@ -31,6 +31,7 @@
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
                         @can ('linea_datos.create')
                         <a href="{{route('linea_datos.create')}}" class="btn btn-primary pull-right">

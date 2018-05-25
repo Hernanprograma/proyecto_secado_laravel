@@ -1,25 +1,3 @@
-{{--
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Editar Muestra de centrífuga
-        </div>
-        <div class="panel-body">
-          {!!Form::model($centrifuga, ['route'=> ['centrifugas.update',$centrifuga], 'method'=>'PUT'])!!}
-
-          @include('centrifugas.partials.form') {!!Form::close()!!}
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection --}}
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -50,6 +28,12 @@
                       <p class="category">Editar datos y muestras de las centrífugas</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+
+                      </div>
 
                       {!!Form::model($centrifuga, ['route'=> ['centrifugas.update',$centrifuga], 'method'=>'PUT'])!!}
 

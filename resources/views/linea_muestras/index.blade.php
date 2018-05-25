@@ -31,6 +31,7 @@
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
+                          <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
                         @can ('linea_muestras.create')
                         <a href="{{route('linea_muestras.create')}}" class="btn btn-primary pull-right">
@@ -56,7 +57,7 @@
                           <tbody>
                             @foreach ($linea_muestras as $linea_muestra)
                             <tr>
-                              
+
                               <td>{{$linea_muestra->linea}}</td>
                               <td>{{Carbon\Carbon::parse($linea_muestra->fecha)->format('d-m-Y')}}</td>
                               <td>{{Carbon\Carbon::parse($linea_muestra->hora)->format('H:i')}}</td>

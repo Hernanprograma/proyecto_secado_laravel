@@ -29,6 +29,8 @@
 	                            </div>
                               <div class="card-content">
                                   <div class="toolbar">
+
+                                    <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
                                     @can ('permisos.create')
                                     <a href="{{route('permisos.create')}}" class="btn btn-primary pull-right">
                                               Crear

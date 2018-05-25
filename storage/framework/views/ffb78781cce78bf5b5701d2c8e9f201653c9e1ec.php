@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -30,13 +28,12 @@
 	                                <p class="category">Lista de Usuarios</p>
 	                            </div>
                               <div class="card-content">
-                                  <div class="toolbar">
+                                <div class="toolbar">
 
-                                      <!--Here you can write extra buttons/actions for the toolbar-->
+                                  <!--Here you can write extra buttons/actions for the toolbar-->
+                                  <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
-
-
-                                  </div>
+                                </div>
                                   <table class="table ">
                                     <thead>
                                       <tr>

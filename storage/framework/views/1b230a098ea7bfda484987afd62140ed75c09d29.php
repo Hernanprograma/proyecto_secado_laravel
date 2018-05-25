@@ -31,6 +31,7 @@
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
+                          <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                         <?php if (\Shinobi::can('linea_muestras.create')): ?>
                         <a href="<?php echo e(route('linea_muestras.create')); ?>" class="btn btn-primary pull-right">
@@ -56,7 +57,7 @@
                           <tbody>
                             <?php $__currentLoopData = $linea_muestras; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $linea_muestra): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                              
+
                               <td><?php echo e($linea_muestra->linea); ?></td>
                               <td><?php echo e(Carbon\Carbon::parse($linea_muestra->fecha)->format('d-m-Y')); ?></td>
                               <td><?php echo e(Carbon\Carbon::parse($linea_muestra->hora)->format('H:i')); ?></td>

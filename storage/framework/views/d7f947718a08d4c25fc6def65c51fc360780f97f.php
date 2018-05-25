@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -34,6 +33,7 @@
                       <div class="toolbar">
 
                           <!--Here you can write extra buttons/actions for the toolbar-->
+                          <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                             <?php if (\Shinobi::can('poli_marcas.create')): ?>
                             <a href="<?php echo e(route('poli_marcas.create')); ?>" class="btn btn-primary pull-right">
