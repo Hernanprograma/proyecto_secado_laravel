@@ -66,4 +66,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Poli_marca');
     }
+    // Relación con poli_marcas
+    public function niveles()
+    {
+        return $this->hasMany('App\Nivel');
+    }
 }

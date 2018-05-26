@@ -16,6 +16,42 @@ Tip 2: you can change the color of the active button using the data-active-color
 
 
     <ul class="nav">
+
+
+      <li id="nav-informes">
+        <a data-toggle="collapse" href="#informes">
+                      <i class="ti-map"></i>
+                      <p>
+            Informes
+                         <b class="caret"></b>
+                      </p>
+                  </a>
+        <div class="collapse" id="informes">
+          <ul class="nav">
+            @can ('gasto_polis.informe')
+            <li id="nav-informes-poli">
+              <a href="{{route('gasto_polis.informe')}}">
+                <span class="sidebar-mini">Poli</span>
+                <span class="sidebar-normal">Gasto de poli</span>
+              </a>
+            </li>
+            @endcan
+
+            @can ('centrifugas.informe')
+            <li id="nav-centrifugas">
+              <a href="{{route('centrifugas.informe')}}">
+            <span class="sidebar-mini">Centri</span>
+            <span class="sidebar-normal">Centrifugas</span>
+          </a>
+            </li>
+            @endcan
+
+          </ul>
+        </div>
+      </li>
+
+
+
       @can ('home.index')
       <li id="nav-dash">
         <a href="/home">
@@ -24,6 +60,7 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       @endcan
+
       @can ('turnos.index')
       <li id="nav-turnos">
         <a href="{{route('turnos.index')}}">

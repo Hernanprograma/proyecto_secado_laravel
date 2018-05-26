@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -24,5 +25,16 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function homedata()
+    {
+        $sacos=DB::select("SELECT * from marcha_centrifugas
+        order by fecha DESC, hora DESC limit 1;");
+        //$sacos=DB::table('gasto_polis');
+
+        //$sacos=$fechaini+$fechafin;
+
+        return $sacos;
     }
 }

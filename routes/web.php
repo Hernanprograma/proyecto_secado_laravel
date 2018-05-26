@@ -17,13 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 //Routes-- todas las rutas tienen la restriccion de inicio de sesion
 Route::middleware(['auth'])->group(function () {
+    Route::get('/home', 'HomeController@index')->name('home');
 
 
-  //Roles
+    //Roles
     Route::get('roles', 'RoleController@index')->name('roles.index')
   ->middleware('permission:roles.index');
 
@@ -106,6 +107,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::delete('centrifugas/{centrifuga}', 'CentrifugaController@destroy')->name('centrifugas.destroy')
 ->middleware('permission:centrifugas.destroy');
+
+    Route::get('centrifuga/informe', 'CentrifugaController@informe')->name('centrifugas.informe')
+->middleware('permission:centrifugas.informe');
+
+
 
     //permisos
     Route::get('permisos', 'PermissionController@index')->name('permisos.index')
@@ -191,10 +197,10 @@ Route::get('linea_datos/{linea_dato}', 'LineaDatoController@show')->name('linea_
 Route::get('linea_datos/{linea_dato}/edit', 'LineaDatoController@edit')->name('linea_datos.edit')
 ->middleware('permission:linea_datos.edit');
 
-Route::put('linea_datos/{linea_dato}', 'LineaMuestraController@update')->name('linea_datos.update')
+Route::put('linea_datos/{linea_dato}', 'LineaDatoController@update')->name('linea_datos.update')
 ->middleware('permission:linea_datos.edit');
 
-Route::delete('linea_datos/{linea_dato}', 'LineaMuestraController@destroy')->name('linea_datos.destroy')
+Route::delete('linea_datos/{linea_dato}', 'LineaDatoController@destroy')->name('linea_datos.destroy')
 ->middleware('permission:linea_datos.destroy');
 
 
@@ -238,6 +244,10 @@ Route::put('gasto_polis/{gasto_poli}', 'GastoPoliController@update')->name('gast
 Route::delete('gasto_polis/{gasto_poli}', 'GastoPoliController@destroy')->name('gasto_polis.destroy')
 ->middleware('permission:gasto_polis.destroy');
 
+Route::get('gasto_polis/informe', 'GastoPoliController@informe')->name('gasto_polis.informe')
+->middleware('permission:gasto_polis.informe');
+
+
 
 //Turnos
 Route::get('turnos', 'TurnoController@index')->name('turnos.index')
@@ -276,3 +286,26 @@ Route::put('tareas/{tarea}', 'TareaController@update')->name('tareas.update')
 
 Route::delete('tareas/{tarea}', 'TareaController@destroy')->name('tareas.destroy')
 ->middleware('permission:tareas.destroy');
+
+//Niveles
+
+Route::get('nivels', 'NivelDatoController@index')->name('nivels.index')
+->middleware('permission:nivels.index');
+
+Route::get('nivels/create', 'NivelController@create')->name('nivels.create')
+->middleware('permission:nivels.create');
+
+Route::post('nivels/store', 'NivelController@store')->name('nivels.store')
+->middleware('permission:nivels.create');
+
+Route::get('nivels/{nivel}', 'NivelController@show')->name('nivels.show')
+->middleware('permission:nivels.show');
+
+Route::get('nivels/{nivel}/edit', 'NivelController@edit')->name('nivels.edit')
+->middleware('permission:nivels.edit');
+
+Route::put('nivels/{nivel}', 'NivelController@update')->name('nivels.update')
+->middleware('permission:nivels.edit');
+
+Route::delete('nivels/{nivel}', 'NivelController@destroy')->name('nivels.destroy')
+->middleware('permission:nivels.destroy');

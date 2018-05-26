@@ -34,7 +34,8 @@
                                   <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                                 </div>
-                                  <table class="table ">
+                                <div class="table-responsive">
+                                  <table  class="table table-striped table-hover">
                                     <thead>
                                       <tr>
                                         <th width="10px">ID</th>
@@ -79,6 +80,7 @@
 
 
                                   </table>
+                                </div>
                                   <?php echo e($users->render()); ?>
 
                               </div>

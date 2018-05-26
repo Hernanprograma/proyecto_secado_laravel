@@ -46,7 +46,8 @@
 
                       </div>
 
-                        <table id="bootstrap-table" class="table">
+                      <div class="table-responsive">
+                        <table  class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="10px">ID</th>
@@ -91,6 +92,7 @@
 
 
                       </table>
+                    </div>
                       {{$poli_marcas->render()}}
 
 

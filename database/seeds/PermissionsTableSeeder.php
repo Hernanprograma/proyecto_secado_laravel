@@ -142,6 +142,12 @@ class PermissionsTableSeeder extends Seeder
       'slug' =>'centrifugas.destroy',
       'description' =>'Eliminar cualquier dato de una centífuga',
       ]);
+        Permission::create([
+      'name' =>'Generar informes de centrifugas',
+      'slug' =>'centrifugas.informe',
+      'description' =>'Generar informes de las centrifugas y descargarlos en PDF y CSV',
+    ]);
+
 
 
         //Simbiotica
@@ -249,6 +255,7 @@ class PermissionsTableSeeder extends Seeder
       'description' =>'Eliminar cualquier registro de los estados de las centrifugas del sistema',
       ]);
 
+
         //Gasto de poli
         Permission::create([
       'name' =>'Ver lista de los sacos de poli gastados',
@@ -271,5 +278,46 @@ class PermissionsTableSeeder extends Seeder
       'slug' =>'gasto_polis.destroy',
       'description' =>'Eliminar cualquier registro de los sacos de poli gastados del sistema',
       ]);
+        Permission::create([
+      'name' =>'Generar informes del gasto de Polielectrolito',
+      'slug' =>'gasto_polis.informe',
+      'description' =>'Generar informes del gasto de poli  en PDF y CSV',
+      ]);
+
+        //Turnos
+        Permission::create([
+    'name' =>'Ver lista de los turnos',
+    'slug' =>'turnos.index',
+    'description' =>'Lista y navega por todas los registros de los turnos en el sistema',
+    ]);
+
+        Permission::create([
+    'name' =>'Editar los turnos',
+    'slug' =>'turnos.edit',
+    'description' =>'Editar cualquier registro de los turnos ',
+    ]);
+        Permission::create([
+    'name' =>'Creacion  de los turnos ',
+    'slug' =>'turnos.create',
+    'description' =>'Crea una registro de los turnos  en el sistema',
+    ]);
+        Permission::create([
+    'name' =>'Eliminar un turno',
+    'slug' =>'turnos.destroy',
+    'description' =>'Eliminar cualquier un turno del sistema',
+    ]);
+
+        //Tareas
+
+        Permission::create([
+'name' =>'Creacion  de las tareas ',
+'slug' =>'tareas.create',
+'description' =>'Crea una registro de las tareas de un turno en el sistema',
+]);
+        Permission::create([
+'name' =>'Eliminar un tarea',
+'slug' =>'tareas.destroy',
+'description' =>'Eliminar cualquier  tarea de un turno del sistema',
+]);
     }
 }

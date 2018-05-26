@@ -29,6 +29,14 @@
                       <p class="category">Editar los datos</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
+
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
+                      
+
+
+                      </div>
 
                       <?php echo Form::model($turno, ['route'=> ['turnos.update',$turno], 'method'=>'PUT']); ?>
 

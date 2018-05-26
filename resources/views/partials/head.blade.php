@@ -17,8 +17,7 @@
 		<!-- datatimepicker  CSS    -->
   	<!--<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>-->
 
-    <!--  general Dashboard core CSS    -->
-    <link href="{{ asset('css/general.css') }}" rel="stylesheet"/>
+
 
     <!--  Paper Dashboard core CSS-->
     <link href="{{ asset('css/paper-dashboard.css') }}" rel="stylesheet"/>
@@ -28,18 +27,16 @@
 
 
     <!--  general Dashboard core CSS    -->
-  	<link href="{{ asset('css/general.css')}}" rel="stylesheet"/>
+  	{{-- <link href="{{ asset('css/general.css')}}" rel="stylesheet"/> --}}
 
 		<!-- datepicker  CSS    -->
   	<!--<link href="css/bootstrap-datepicker.css" rel="stylesheet"/>-->
 
-		<!--  PIcker de fecha y horas   -->
-		<link href="{{asset('css/classic.css')}}" rel="stylesheet"/>
-  	<link href="{{asset('css/classic.date.css')}}" rel="stylesheet"/>
-		<link href="{{asset('css/classic.time.css')}}" rel="stylesheet"/>
 
 
-		<link href="{{('css/bootstrap-datepicker.css')}}" rel="stylesheet" />
+		{{-- <link href="{{asset('css/bootstrap-datepicker.css')}}" rel="stylesheet" /> --}}
+		{{-- <link href="{{asset('css/fontawesome-all.css')}}" rel="stylesheet" /> --}}
+		<!-- cdn for modernizr, if you haven't included it already -->
 
 
 

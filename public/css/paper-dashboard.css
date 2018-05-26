@@ -11568,6 +11568,10 @@ star {
     margin: 0;
     padding: 5px 15px;
   }
+
+  body{
+    font-size:12px
+  }
 }
 
 button.btn.btn-fill.btn-wd.boton-local {
@@ -11575,4 +11579,8 @@ button.btn.btn-fill.btn-wd.boton-local {
     height: 150px;
     font-size: xx-large;
     background-color: #EB5E28;
+}
+
+.table-responsive{
+  border:none
 }

@@ -24,8 +24,8 @@
                       <div class="col-md-12">
                           <div class="card">
                             <div class="card-header">
-	                                <h4 class="card-title">Roles</h4>
-	                                <p class="category">Lista de Datos y muestras de las centrífugas</p>
+	                                <h4 class="card-title">Permisos del sistema</h4>
+	                                <p class="category">Lista de los permisos del sistema</p>
 	                            </div>
                               <div class="card-content">
                                   <div class="toolbar">
@@ -40,7 +40,8 @@
                                     <?php endif; ?>
 
                                   </div>
-                                <table class="table ">
+                                  <div class="table-responsive">
+                                    <table  class="table table-striped table-hover">
                                   <thead>
                                     <tr>
                                       <th width="10px">ID</th>
@@ -87,6 +88,7 @@
 
 
                                 </table>
+                              </div>
                                 <?php echo e($permisos->render()); ?>
 
 

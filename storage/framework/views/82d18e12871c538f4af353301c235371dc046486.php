@@ -1,6 +1,5 @@
-
-
 <!doctype html>
+
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
 <?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -36,35 +35,47 @@
                         <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                       </div>
-
+                      <div class="table-responsive">
                         <table  class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="20px">Dato</th>
-                            <th width="20px">Valor</th>
+                            <th width="30px">Valor</th>
+
                           </tr>
                         </thead>
                         <tbody>
+<tr>
+                          <tr>
+                              <td><strong>ID: </strong></td>
+                              <td><?php echo e($role->id); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Nombre: </strong></td>
+                              <td><?php echo e($role->name); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Etiqueta(slug): </td><td></strong><?php echo e($role->slug); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Description: </td><td></strong><?php echo e($role->description); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Creado: </td><td></strong><?php echo e(Carbon\Carbon::parse($role->created_at)->format('d-m-Y H:i')); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Actualizado: </td><td></strong><?php echo e(Carbon\Carbon::parse($role->updated_at)->format('d-m-Y H:i')); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Especial: </td><td></strong><?php echo e($role->special); ?></td>
+                            </tr>
+
+</tr>
 
 
-                            <tr><td><strong>ID: </strong></td><td><?php echo e($role->id); ?></td></tr>
-                            <tr><td><strong>Nombre: </strong></td><td><?php echo e($role->name); ?></td></tr>
-                            <tr><td><strong>Etiqueta(slug): </td><td></strong><?php echo e($role->slug); ?></td></tr>
-                            <tr><td><strong>Description: </td><td></strong><?php echo e($role->description); ?></td></tr>
-                            <tr><td><strong>Creado: </td><td></strong><?php echo e(Carbon\Carbon::parse($role->created_at)->format('d-m-Y H:i')); ?></td></tr>
-                            <tr><td><strong>Actualizado: </td><td></strong><?php echo e(Carbon\Carbon::parse($role->updated_at)->format('d-m-Y H:i')); ?></td></tr>
-                            <tr><td><strong>Especial: </td><td></strong><?php echo e($role->special); ?></td></tr>
-
-
-
-
-                        </tbody>
-                      </table>
-
-
-
-
-
+                          </tbody>
+                        </table>
+                      </div>
 
                     </div>
                   </div>

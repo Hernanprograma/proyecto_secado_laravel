@@ -12,7 +12,7 @@ class TurnosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Turno::class, 100)->create();
+        factory(App\Turno::class, 1000)->create();
 
         //       //Users
   //       Turno::create([

@@ -75,8 +75,9 @@
                               <td><strong>Crea registro</strong></td>
                               <td>
                                 @isset($simbiotica->user->name){{$simbiotica->user->name}}
-                                  <blade endisset</td>
-                            </tr>/>
+                                @endisset
+                              </td>
+                            </tr>
 
                           </tr>
 

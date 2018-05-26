@@ -11,6 +11,6 @@ class TareasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Tarea::class, 200)->create();
+        factory(App\Tarea::class, 5000)->create();
     }
 }

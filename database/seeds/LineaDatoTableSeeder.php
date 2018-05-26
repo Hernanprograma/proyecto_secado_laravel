@@ -11,6 +11,6 @@ class LineaDatoTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Linea_dato::class, 100)->create();
+        factory(App\Linea_dato::class, 2000)->create();
     }
 }

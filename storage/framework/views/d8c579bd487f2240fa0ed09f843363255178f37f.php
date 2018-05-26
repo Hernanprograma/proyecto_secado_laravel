@@ -28,8 +28,15 @@
                       <p class="category">Detalle dato de la simbiótica</p>
                     </div>
                     <div class="card-content">
+                      <div class="toolbar">
 
-                        <table  class="table table-striped table-hover">
+                        <!--Here you can write extra buttons/actions for the toolbar-->
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
+
+                      </div>
+
+
+                      <table class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="20px">Dato</th>
@@ -40,13 +47,38 @@
                         <tbody>
 
                           <tr>
-                            <tr><td><strong>ID</strong></td><td><?php echo e($simbiotica->id); ?> </td></tr>
-                            <tr><td><strong>Caudal </strong></td><td><?php echo e($simbiotica->caudal); ?> </td></tr>
-                            <tr><td><strong>Totalizado </strong></td><td><?php echo e($simbiotica->totalizado); ?> </td></tr>
-                            <tr><td><strong>Incidencias </strong></td><td><?php echo e($simbiotica->incidencias); ?> </td></tr>
-                            <tr><td><strong>Fecha </strong></td><td><?php echo e(Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')); ?></td></tr>
-                            <tr><td><strong>Hora </strong></td><td><?php echo e(Carbon\Carbon::parse($simbiotica->hora)->format('H:i')); ?></td></tr>
-                            <tr><td><strong>Crea registro</strong></td><td><?php if(isset($simbiotica->user->name)): ?><?php echo e($simbiotica->user->name); ?> <?php endif; ?></td></tr>
+                            <tr>
+                              <td><strong>ID</strong></td>
+                              <td><?php echo e($simbiotica->id); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Caudal </strong></td>
+                              <td><?php echo e($simbiotica->caudal); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Totalizado </strong></td>
+                              <td><?php echo e($simbiotica->totalizado); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Incidencias </strong></td>
+                              <td><?php echo e($simbiotica->incidencias); ?> </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Fecha </strong></td>
+                              <td><?php echo e(Carbon\Carbon::parse($simbiotica->fecha)->format('d-m-Y')); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Hora </strong></td>
+                              <td><?php echo e(Carbon\Carbon::parse($simbiotica->hora)->format('H:i')); ?></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Crea registro</strong></td>
+                              <td>
+                                <?php if(isset($simbiotica->user->name)): ?><?php echo e($simbiotica->user->name); ?>
+
+                                <?php endif; ?>
+                              </td>
+                            </tr>
 
                           </tr>
 

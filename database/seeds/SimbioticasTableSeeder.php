@@ -11,6 +11,6 @@ class SimbioticasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Simbiotica::class, 100)->create();
+        factory(App\Simbiotica::class, 3000)->create();
     }
 }

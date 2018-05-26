@@ -16,6 +16,42 @@ Tip 2: you can change the color of the active button using the data-active-color
 
 
     <ul class="nav">
+
+
+      <li id="nav-informes">
+        <a data-toggle="collapse" href="#informes">
+                      <i class="ti-map"></i>
+                      <p>
+            Informes
+                         <b class="caret"></b>
+                      </p>
+                  </a>
+        <div class="collapse" id="informes">
+          <ul class="nav">
+            <?php if (\Shinobi::can('gasto_polis.informe')): ?>
+            <li id="nav-informes-poli">
+              <a href="<?php echo e(route('gasto_polis.informe')); ?>">
+                <span class="sidebar-mini">Poli</span>
+                <span class="sidebar-normal">Gasto de poli</span>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if (\Shinobi::can('centrifugas.informe')): ?>
+            <li id="nav-centrifugas">
+              <a href="<?php echo e(route('centrifugas.informe')); ?>">
+            <span class="sidebar-mini">Centri</span>
+            <span class="sidebar-normal">Centrifugas</span>
+          </a>
+            </li>
+            <?php endif; ?>
+
+          </ul>
+        </div>
+      </li>
+
+
+
       <?php if (\Shinobi::can('home.index')): ?>
       <li id="nav-dash">
         <a href="/home">
@@ -24,6 +60,7 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
       </li>
       <?php endif; ?>
+
       <?php if (\Shinobi::can('turnos.index')): ?>
       <li id="nav-turnos">
         <a href="<?php echo e(route('turnos.index')); ?>">

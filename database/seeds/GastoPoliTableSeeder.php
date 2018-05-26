@@ -12,6 +12,6 @@ class GastoPoliTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Gasto_poli::class, 100)->create();
+        factory(App\Gasto_poli::class, 200)->create();
     }
 }

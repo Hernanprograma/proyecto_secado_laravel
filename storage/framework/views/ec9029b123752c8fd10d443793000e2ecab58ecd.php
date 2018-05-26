@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
@@ -33,10 +31,9 @@
                       <div class="toolbar">
 
                         <!--Here you can write extra buttons/actions for the toolbar-->
-                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">back</a>
-                        
-                      </div>
+                        <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
+                      </div>
                         <table  class="table table-striped table-hover">
                         <thead>
                           <tr>
@@ -91,6 +88,7 @@
           <?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
       </div>
+    </div>
 </body>
 
 <?php echo $__env->make('partials.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

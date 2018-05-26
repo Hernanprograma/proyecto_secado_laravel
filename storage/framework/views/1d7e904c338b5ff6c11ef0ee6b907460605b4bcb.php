@@ -32,6 +32,7 @@
                                   <div class="toolbar">
 
                                       <!--Here you can write extra buttons/actions for the toolbar-->
+                                      <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
 
                                         <?php if (\Shinobi::can('simbioticas.create')): ?>
                                         <a href="<?php echo e(route('simbioticas.create')); ?>" class="btn btn-primary pull-right">
@@ -42,7 +43,7 @@
 
                                   </div>
                                   <div class="table-responsive">
-                                  <table class="table">
+                                    <table  class="table table-striped table-hover">
                                     <thead>
                                       <tr>
 

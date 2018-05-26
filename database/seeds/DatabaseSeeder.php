@@ -26,5 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GastoPoliTableSeeder::class);
         $this->call(TurnosTableSeeder::class);
         $this->call(TareasTableSeeder::class);
+        $this->call(NivelTableSeeder::class);
     }
 }

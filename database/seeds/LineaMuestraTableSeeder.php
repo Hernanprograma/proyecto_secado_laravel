@@ -12,6 +12,6 @@ class LineaMuestraTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Linea_muestra::class, 100)->create();
+        factory(App\Linea_muestra::class, 2000)->create();
     }
 }

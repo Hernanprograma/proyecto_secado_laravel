@@ -11,6 +11,6 @@ class MarchaCentrifugaTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Marcha_centrifuga::class, 100)->create();
+        factory(App\Marcha_centrifuga::class, 3000)->create();
     }
 }

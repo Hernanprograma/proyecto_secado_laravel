@@ -1,6 +1,5 @@
-
-
 <!doctype html>
+
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
 @include('partials.head')
@@ -36,35 +35,47 @@
                         <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
 
                       </div>
-
+                      <div class="table-responsive">
                         <table  class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th width="20px">Dato</th>
-                            <th width="20px">Valor</th>
+                            <th width="30px">Valor</th>
+
                           </tr>
                         </thead>
                         <tbody>
+<tr>
+                          <tr>
+                              <td><strong>ID: </strong></td>
+                              <td>{{$role->id}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Nombre: </strong></td>
+                              <td>{{$role->name}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Etiqueta(slug): </td><td></strong>{{$role->slug}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Description: </td><td></strong>{{$role->description}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Creado: </td><td></strong>{{Carbon\Carbon::parse($role->created_at)->format('d-m-Y H:i')}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Actualizado: </td><td></strong>{{Carbon\Carbon::parse($role->updated_at)->format('d-m-Y H:i')}}</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Especial: </td><td></strong>{{$role->special}}</td>
+                            </tr>
+
+</tr>
 
 
-                            <tr><td><strong>ID: </strong></td><td>{{$role->id}}</td></tr>
-                            <tr><td><strong>Nombre: </strong></td><td>{{$role->name}}</td></tr>
-                            <tr><td><strong>Etiqueta(slug): </td><td></strong>{{$role->slug}}</td></tr>
-                            <tr><td><strong>Description: </td><td></strong>{{$role->description}}</td></tr>
-                            <tr><td><strong>Creado: </td><td></strong>{{Carbon\Carbon::parse($role->created_at)->format('d-m-Y H:i')}}</td></tr>
-                            <tr><td><strong>Actualizado: </td><td></strong>{{Carbon\Carbon::parse($role->updated_at)->format('d-m-Y H:i')}}</td></tr>
-                            <tr><td><strong>Especial: </td><td></strong>{{$role->special}}</td></tr>
-
-
-
-
-                        </tbody>
-                      </table>
-
-
-
-
-
+                          </tbody>
+                        </table>
+                      </div>
 
                     </div>
                   </div>

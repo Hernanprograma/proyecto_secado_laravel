@@ -6,6 +6,7 @@ use App\Gasto_poli;
 use App\Poli_marca;
 use Illuminate\Http\Request;
 use Auth;
+use DB;
 
 class GastoPoliController extends Controller
 {
@@ -113,5 +114,23 @@ class GastoPoliController extends Controller
     {
         $gasto_poli->delete();
         return back()->with('info', 'Eliminado correctamente');
+    }
+
+    public function informe()
+    {
+        return view('gasto_polis.informe');
+    }
+    public function sacospoli($fechaini, $fechafin)
+    {
+        $sacos=DB::select("SELECT u.name as operario ,a.fecha, a.hora, a.incidencias, p.name as marca
+          FROM secado_termico.gasto_polis as a,secado_termico.users as u,
+          secado_termico.poli_marcas as p WHERE u.id=a.user_id and p.id=a.marca_id
+          and  a.fecha  BETWEEN STR_TO_DATE('$fechaini','%Y-%m-%d') AND  STR_TO_DATE('$fechafin','%Y-%m-%d')
+          order by a.fecha DESC, a.hora DESC;");
+        //$sacos=DB::table('gasto_polis');
+
+        //$sacos=$fechaini+$fechafin;
+
+        return $sacos;
     }
 }
