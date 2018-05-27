@@ -113,7 +113,9 @@
 
 
 <script type="text/javascript">
-  $('#nav-simbio').addClass('active');
+$('#nav-simbio').addClass('active');
+$('#nav-lecturas_secado').addClass('active');
+$('#lecturas_secado').addClass('collapse in');
 </script>
 
 </html>

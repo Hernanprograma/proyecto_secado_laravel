@@ -123,7 +123,8 @@
 <script src="{{ asset('js/scripts_informe_centrifuga.js')}}"></script>
 
 <script type="text/javascript">
-  $('#nav-informes').addClass('active')
+  $('#nav-informes').addClass('active');
+  $('#informes').addClass('collapse in');
   $('#nav-centrifugas').addClass('active');
 </script>
 

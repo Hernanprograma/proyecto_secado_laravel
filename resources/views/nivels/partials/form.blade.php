@@ -1,9 +1,12 @@
 
 <div class="form-group">
-  {{Form::label('fecha','Fecha')}} {{ Form::date('fecha', $nivel->fecha, ['class'=>'form-control']) }}
+  {{Form::label('fecha','Fecha')}}
+{{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control']) }}
 </div>
+
 <div class="form-group">
-  {{Form::label('hora','Hora')}} {{ Form::time('hora',$nivel->hora, ['class'=>'form-control']) }}
+{{Form::label('hora','Hora')}}
+{{ Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
   {{Form::label('nivel_seco_a','Nivel de fango seco A')}} {{Form::number('nivel_seco_a',$nivel->nivel_seco_a,['class'=>'form-control','step'=>'any'])}}
@@ -28,19 +31,19 @@
   {{Form::label('gas','Gas')}} {{Form::number ('gas',$nivel->gas,['class'=>'form-control','step'=>'any'])}}
 </div>
 <div class="form-group">
-  {{Form::label('linea_a','Estado linea A')}}{{ Form::select('linea_a', ['En Marcha'=>'En Marcha','Parada'=>'parada'], $nivel->linea_a, ['class'=>'form-control']) }}
+  {{Form::label('linea_a','Estado linea A')}}{{ Form::select('linea_a', ['En Marcha'=>'En Marcha','Parada'=>'Parada'], $nivel->linea_a, ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
-  {{Form::label('linea_b','Estado linea B')}}{{ Form::select('linea_b', ['En Marcha'=>'En Marcha','Parada'=>'parada'], $nivel->linea_b, ['class'=>'form-control']) }}
+  {{Form::label('linea_b','Estado linea B')}}{{ Form::select('linea_b', ['En Marcha'=>'En Marcha','Parada'=>'Parada'], $nivel->linea_b, ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
-  {{Form::label('centrifuga_a','Estado Centrifuga A')}}{{ Form::select('centrifuga_a', ['En Marcha'=>'En Marcha','Parada'=>'parada'], $nivel->centrifuga_a, ['class'=>'form-control']) }}
+  {{Form::label('centrifuga_a','Estado Centrifuga A')}}{{ Form::select('centrifuga_a', ['En Marcha'=>'En Marcha','Parada'=>'Parada'], $nivel->centrifuga_a, ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
-  {{Form::label('centrifuga_b','Estado Centrifuga B')}}{{ Form::select('centrifuga_b', ['En Marcha'=>'En Marcha','Parada'=>'parada'], $nivel->centrifuga_b, ['class'=>'form-control']) }}
+  {{Form::label('centrifuga_b','Estado Centrifuga B')}}{{ Form::select('centrifuga_b', ['En Marcha'=>'En Marcha','Parada'=>'Parada'], $nivel->centrifuga_b, ['class'=>'form-control']) }}
 </div>
 <div class="form-group">
-  {{Form::label('centrifuga_c','Estado Centrifuga C')}}{{ Form::select('centrifuga_c', ['En Marcha'=>'En Marcha','Parada'=>'parada'], $nivel->centrifuga_c, ['class'=>'form-control']) }}
+  {{Form::label('centrifuga_c','Estado Centrifuga C')}}{{ Form::select('centrifuga_c', ['En Marcha'=>'En Marcha','Parada'=>'Parada'], $nivel->centrifuga_c, ['class'=>'form-control']) }}
 </div>
 
 

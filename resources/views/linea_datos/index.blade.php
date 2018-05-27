@@ -122,7 +122,9 @@
 
 
 <script type="text/javascript">
-  $('#nav-linea_datos').addClass('active');
+$('#nav-linea_datos').addClass('active');
+$('#nav-lecturas_secado').addClass('active');
+$('#lecturas_secado').addClass('collapse in');
 </script>
 
 </html>

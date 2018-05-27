@@ -12,8 +12,8 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    //'auth.failed' => 'Las credenciales no corresponden con lo que tenemos almacenado en nuestra base de datos.',
+    'failed' => 'Las credenciales no corresponden con lo que tenemos almacenado en nuestra base de datos.',
+    'throttle' => 'Demasiados intentos. Prueba otra vez en :seconds segundos.',
 
 ];

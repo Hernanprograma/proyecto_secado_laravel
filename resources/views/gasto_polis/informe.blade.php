@@ -114,7 +114,8 @@
 <script src="{{ asset('js/scripts_informe_gasto_poli.js')}}"></script>
 
 <script type="text/javascript">
-  $('#nav-informes').addClass('active')
+  $('#nav-informes').addClass('active');
+  $('#informes').addClass('collapse in');
   $('#nav-informes-poli').addClass('active');
 </script>
 

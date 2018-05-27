@@ -319,5 +319,36 @@ class PermissionsTableSeeder extends Seeder
 'slug' =>'tareas.destroy',
 'description' =>'Eliminar cualquier  tarea de un turno del sistema',
 ]);
+
+
+
+        //Niveles y estado de la maquinaria
+
+        Permission::create([
+'name' =>'Ver el nivel y el estado de los equipos',
+'slug' =>'nivels.index',
+'description' =>'Lista el histótico de niveles de los equipos en sistema',
+]);
+
+        Permission::create([
+'name' =>'Editar el estado de los niveles',
+'slug' =>'nivels.edit',
+'description' =>'Editar el estado de los equipos(No asignar este permiso; cualquier duda preguntar al Superadmin)',
+]);
+        Permission::create([
+'name' =>'Creacion  de un nuevo cambio de estado de equipos o niveles',
+'slug' =>'nivels.create',
+'description' =>'Crea una registro de los niveles de equipos y estados de estos',
+]);
+        Permission::create([
+'name' =>'Eliminar datos de sacos de poli gastados',
+'slug' =>'nivels.destroy',
+'description' =>'Eliminar el estado de los equipos(No asignar este permiso; cualquier duda preguntar al Superadmin)',
+]);
+        Permission::create([
+'name' =>'Generar informes del estado de los equipos y niveles',
+'slug' =>'nivels.informe',
+'description' =>'Generar informes del estado de los equipos y niveles en PDF y CSV',
+]);
     }
 }

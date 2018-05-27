@@ -30,9 +30,7 @@
                     <b class="caret"></b>
                   </a>
           <ul class="dropdown-menu">
-            <li><a href="userprofile">Perfil de usuario</a></li>
-            {{--
-            <li><a href="logout"><b>Cerrar sesión</b></a></li> --}}
+          
 
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">

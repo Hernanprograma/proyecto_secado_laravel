@@ -109,6 +109,8 @@
 
 <script type="text/javascript">
   $('#nav-user').addClass('active');
+  $('#nav-gestion').addClass('active');
+  $('#gestion').addClass('collapse in');
 </script>
 
 </html>

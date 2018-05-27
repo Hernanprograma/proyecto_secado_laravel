@@ -289,7 +289,7 @@ Route::delete('tareas/{tarea}', 'TareaController@destroy')->name('tareas.destroy
 
 //Niveles
 
-Route::get('nivels', 'NivelDatoController@index')->name('nivels.index')
+Route::get('nivels', 'NivelController@index')->name('nivels.index')
 ->middleware('permission:nivels.index');
 
 Route::get('nivels/create', 'NivelController@create')->name('nivels.create')

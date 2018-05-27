@@ -22,7 +22,7 @@
 
   <?php echo e($permiso->id); ?>
 
-   <em>(<?php echo e($permiso->description ?: 'Sin descripcion'); ?>)</em>
+   <em><?php echo e($permiso->description ?: 'Sin descripcion'); ?></em>
 </label>
 
     </li>

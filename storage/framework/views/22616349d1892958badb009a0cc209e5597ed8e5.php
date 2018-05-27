@@ -7,7 +7,7 @@
 </div>
 
 <div class="form-group">
-<?php echo e(Form::label('hora','Hora de Paro/Marcha')); ?>
+<?php echo e(Form::label('hora','Hora')); ?>
 
 <?php echo e(Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control'])); ?>
 

@@ -29,7 +29,7 @@ class HomeController extends Controller
 
     public function homedata()
     {
-        $sacos=DB::select("SELECT * from marcha_centrifugas
+        $sacos=DB::select("SELECT * from nivels
         order by fecha DESC, hora DESC limit 1;");
         //$sacos=DB::table('gasto_polis');
 

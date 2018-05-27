@@ -15,7 +15,7 @@ class NivelController extends Controller
      */
     public function index()
     {
-        $nivels=Nivel::orderBy('fecha', 'desc')->orderBy('hora', 'desc')->paginate(5);
+        $nivels=Nivel::orderBy('created_at', 'desc')->paginate(5);
         return view('nivels.index', compact('nivels'));
     }
 

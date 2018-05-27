@@ -61,10 +61,6 @@
                               <td><strong>Hora </strong></td>
                               <td>{{Carbon\Carbon::parse($nivel->hora)->format('H:i')}}</td>
                             </tr>
-                            <tr>
-                              <td><strong>Linea</strong></td>
-                              <td>{{$nivel->linea}} </td>
-                            </tr>
 
 
                             <tr>
@@ -72,15 +68,16 @@
                               <td>{{$nivel->nivel_seco_a}}% </td>
                             </tr>
                             <tr>
-                              <td><strong>Intensidad Tambor </strong></td>
+                              <td><strong>Silo de Fango seco B </strong></td>
                               <td>{{$nivel->nivel_seco_b}}% </td>
                             </tr>
+
                             <tr>
                               <td><strong>Silo Nuevo</strong></td>
                               <td>{{$nivel->silo_nuevo}} </td>
                             </tr>
                             <tr>
-                              <td><strong>Tilo almacenamiento</strong></td>
+                              <td><strong>Silo almacenamiento</strong></td>
                               <td>{{$nivel->silo_almacen}} </td>
                             </tr>
                             <tr>
@@ -101,7 +98,7 @@
                               <td>{{$nivel->linea_a}} </td>
                             </tr>
                             <tr>
-                              <td><strong>Estado de linea de fango A</strong></td>
+                              <td><strong>Estado de linea de fango B</strong></td>
                               <td>{{$nivel->linea_b}} </td>
                             </tr>
                             <tr>
@@ -117,7 +114,7 @@
                               <td><strong>Centrifuga C</strong></td>
                               <td>{{$nivel->centrifuga_c}}</td>
                             </tr>
-                          
+
 
                           </tr>
                         </tbody>

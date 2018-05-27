@@ -63,7 +63,9 @@
 
 
 <script type="text/javascript">
-  $('#nav-permisos').addClass('active');
+$('#nav-permisos').addClass('active');
+$('#nav-gestion').addClass('active');
+$('#gestion').addClass('collapse in');
 </script>
 
 </html>

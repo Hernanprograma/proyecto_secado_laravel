@@ -16,7 +16,7 @@
 
   <?php echo e($role->name); ?>
 
-   <em>(<?php echo e($role->description ?: 'Sin descripcion'); ?>)</em>
+   <em><?php echo e($role->description ?: 'Sin descripcion'); ?></em>
 </label>
 
     </li>

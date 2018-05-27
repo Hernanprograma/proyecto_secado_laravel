@@ -68,6 +68,8 @@
 
 <script type="text/javascript">
   $('#nav-roles').addClass('active');
+  $('#nav-gestion').addClass('active');
+  $('#gestion').addClass('collapse in');
 </script>
 
 </html>

@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -136,51 +142,15 @@
 
 
 
-						 <form id="formdemo" role="form" method="POST" action="<?php echo e(url('/login')); ?>">
-								<?php echo e(csrf_field()); ?>
-
-
-
-
-
-									<div class="card-content">
-											<div class="form-group">
-													<div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-
-														<input id="email" type="hidden" class="form-control input-no-border"  name="email" value="demo@solarbattmonitor.com">
-														<?php if($errors->has('email')): ?>
-														<span class="help-block">
-																<strong><?php echo e($errors->first('email')); ?></strong>
-														</span>
-														<?php endif; ?>
-											</div>
-
-
-
-
-
-													<div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
-
-
-													<input id="password" type="hidden" class="form-control input-no-border" name="password"  value="demodemo" required>
-													<?php if($errors->has('password')): ?>
-													<span class="help-block">
-															<strong><?php echo e($errors->first('password')); ?></strong>
-													</span>
-													<?php endif; ?>
-
-											</div>
-
-							</div>
-					</form>
-
 
 
         	<footer class="footer footer-transparent">
                 <div class="container">
-                    <div class="copyright">
-                          &copy;2018, made with <i class="fa fa-heart heart"></i> by <a href="http://www.Hernanprograma.es">HernanPrograma</a>
-                    </div>
+									<div class="copyright pull-right">
+										 2018, Hecho con <i class="ti-heart"></i> by <a href="https://www.linkedin.com/in/hernanrodriguezvalls/">Hernan Rodríguez Valls</a>&nbsp;<i class="ti-linkedin"></i>
+
+
+									</div>
                 </div>
             </footer>
         </div>

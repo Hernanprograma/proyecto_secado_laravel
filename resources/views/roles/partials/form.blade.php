@@ -18,7 +18,7 @@
         <input type="checkbox" name="permisos[]" value="{{ $permiso->id }}" @if($role->permissions->contains($permiso)) checked @endif>
 
   {{$permiso->id}}
-   <em>({{$permiso->description ?: 'Sin descripcion'}})</em>
+   <em>{{$permiso->description ?: 'Sin descripcion'}}</em>
 </label>
 
     </li>

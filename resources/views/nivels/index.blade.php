@@ -35,7 +35,7 @@
 
                         @can ('nivels.create')
                         <a href="{{route('nivels.create')}}" class="btn btn-primary pull-right">
-                                                  Crear
+                                                  Modificar ultimos niveles
                                                 </a>
                         @endcan
 
@@ -46,10 +46,10 @@
                           <thead>
                             <tr>
 
-                              <th>gas</th>
-                              <th>silo_nuevo</th>
-                              <th>silo_almacen</th>
-                              <th>digestor</th>
+                              <th>Gas</th>
+                              <th>Silo nuevo</th>
+                              <th>Silo almacen</th>
+                              <th>Digestor</th>
 
 
                               <th colspan="3">&nbsp;</th>
@@ -63,7 +63,7 @@
                               <td>{{$nivel->gas}}</td>
                               <td>{{$nivel->silo_nuevo}}</td>
                               <td>{{$nivel->silo_almacen}}</td>
-                              <td>{{$nivel->tt4}}</td>
+                              <td>{{$nivel->digestor}}</td>
 
                               @can ('nivels.show')
                               <td style="padding:0">

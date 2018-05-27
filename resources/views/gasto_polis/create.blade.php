@@ -65,6 +65,8 @@
 
 <script type="text/javascript">
   $('#nav-gasto_polis').addClass('active');
+  $('#nav-lecturas_secado').addClass('active');
+  $('#lecturas_secado').addClass('collapse in');
 </script>
 
 </html>

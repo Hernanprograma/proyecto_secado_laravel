@@ -30,8 +30,7 @@
                     <b class="caret"></b>
                   </a>
           <ul class="dropdown-menu">
-            <li><a href="userprofile">Perfil de usuario</a></li>
-            
+          
 
             <li><a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">

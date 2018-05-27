@@ -5,7 +5,7 @@
 </div>
 
 <div class="form-group">
-{{Form::label('hora','Hora de Paro/Marcha')}}
+{{Form::label('hora','Hora')}}
 {{ Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
 </div>
 
