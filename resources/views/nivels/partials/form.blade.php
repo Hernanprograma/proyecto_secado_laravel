@@ -1,13 +1,10 @@
 
-<div class="form-group">
-  {{Form::label('fecha','Fecha')}}
-{{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control']) }}
-</div>
 
-<div class="form-group">
-{{Form::label('hora','Hora')}}
-{{ Form::time('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
-</div>
+{{ Form::hidden('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control']) }}
+
+
+{{ Form::hidden('hora',\Illuminate\Support\Carbon::now()->format('H:i'), ['class'=>'form-control']) }}
+
 <div class="form-group">
   {{Form::label('nivel_seco_a','Nivel de fango seco A')}} {{Form::number('nivel_seco_a',$nivel->nivel_seco_a,['class'=>'form-control','step'=>'any'])}}
 </div>

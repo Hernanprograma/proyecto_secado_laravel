@@ -249,7 +249,7 @@
 										<div class="col-xs-7">
 											<div class="numbers">
 												<p>Linea secado B</p>
-												<div style="fornt"id="linea_b">
+												<div id="linea_b">
 
 												</div>
 											</div>

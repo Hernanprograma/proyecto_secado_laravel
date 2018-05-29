@@ -118,7 +118,7 @@ class CentrifugaController extends Controller
         $centrifugas=DB::select("SELECT entrada, salida, centrifuga,
           consigna, va, vr, par, t_entrada, t_salida, vibracion,
           caudal_ent, marcapoli, caudal_poli, aspecto, fecha, hora
-        FROM secado_termico.centrifugas WHERE fecha
+        FROM centrifugas WHERE fecha
         BETWEEN STR_TO_DATE('$fechaini','%Y-%m-%d') AND  STR_TO_DATE('$fechafin','%Y-%m-%d')
         order by fecha DESC, hora DESC;");
         //$sacos=DB::table('gasto_polis');

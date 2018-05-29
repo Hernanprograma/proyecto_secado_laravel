@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function homedata()
     {
         $sacos=DB::select("SELECT * from nivels
-        order by fecha DESC, hora DESC limit 1;");
+        order by created_at DESC limit 1;");
         //$sacos=DB::table('gasto_polis');
 
         //$sacos=$fechaini+$fechafin;

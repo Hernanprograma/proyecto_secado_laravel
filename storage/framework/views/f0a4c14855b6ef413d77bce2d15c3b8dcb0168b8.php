@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="es">
 <!--CABECERAS DE HTML  ...esta en la ruta views/partials/head-->
-@include('partials.head')
+<?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <body>
   <div class="wrapper">
     <!--BARRA IZQUIERDA DE MENUS ......esta en la ruta views/partials/sidebar-->
-    @include('partials.sidebar')
+    <?php echo $__env->make('partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     <div class="main-panel">
       <!--BARRA SUPERIOR DE MENUS ......esta en la ruta views/partials/sidebar-->
-      @include('partials.defaultbar')
+      <?php echo $__env->make('partials.defaultbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
       <div class="content">
         <div class="container-fluid">
@@ -33,21 +33,23 @@
                         <div class="row">
                       <div class="form-group col-md-2 col-xs-6">
 
-                      <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
+                      <a class="btn btn-info" href="<?php echo e(URL::previous()); ?>">Volver</a>
                     </div>
 
 
 
 
                       <div class="form-group col-md-3 col-xs-12">
-                        {{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control','id'=>'fechaini']) }} {{Form::label('fecha','Fecha Inicial')}}
+                        <?php echo e(Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control','id'=>'fechaini'])); ?> <?php echo e(Form::label('fecha','Fecha Inicial')); ?>
+
                       </div>
 
 
 
                         <div class="form-group col-md-3 col-xs-12">
 
-                        {{ Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control','id'=>'fechafin']) }} {{Form::label('fecha','Fecha Final')}}
+                        <?php echo e(Form::date('fecha', \Illuminate\Support\Carbon::now(), ['class'=>'form-control','id'=>'fechafin'])); ?> <?php echo e(Form::label('fecha','Fecha Final')); ?>
+
                       </div>
 
                       <div class="form-group col-md-2 col-xs-12">
@@ -77,12 +79,12 @@
 
                         <th data-field="fecha" data-sortable="true" data-visible="true" data-formatter="dateFormat">Fecha</th>
                         <th data-field="hora" data-sortable="true" data-visible="true">Hora</th>
-                        <th data-field="entrada" class="text-center" data-sortable="true">Entrada</th>
-                        <th data-field="salida" class="text-center" data-sortable="true">Salida</th>
-                        <th data-field="consigna" class="text-center" data-sortable="true">Consigna</th>
-                        <th data-field="va" data-sortable="true" data-visible="true" >VA</th>
-                        <th data-field="vr" data-sortable="true" data-visible="true">VR</th>
-                        <th data-field="par" data-sortable="true" data-visible="true">Par</th>
+                        <th data-field="entrada" class="text-center" data-sortable="true">Nombre</th>
+                        <th data-field="salida" class="text-center" data-sortable="true">Nombre</th>
+                        <th data-field="consigna" class="text-center" data-sortable="true">Nombre</th>
+                        <th data-field="va" data-sortable="true" data-visible="true" >Fecha</th>
+                        <th data-field="vr" data-sortable="true" data-visible="true">Hora</th>
+                        <th data-field="par" data-sortable="true" data-visible="true">Marca de poli</th>
                         <th data-field="t_entrada" data-sortable="true">Temp entrada</th>
                         <th data-field="t_salida" data-sortable="true">Temp salida</th>
                         <th data-field="vibracion" data-sortable="true">Vibracion</th>
@@ -111,16 +113,16 @@
 
 
 
-        @include('partials.footer')
+        <?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       </div>
     </div>
 </body>
 
-@include('partials.scripts')
+<?php echo $__env->make('partials.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 <!-- Scripts Charts-->
-<script src="{{ asset('js/scripts_informe_centrifuga.js')}}"></script>
+<script src="<?php echo e(asset('js/scripts_informe_centrifuga.js')); ?>"></script>
 
 <script type="text/javascript">
   $('#nav-informes').addClass('active');
@@ -128,12 +130,12 @@
   $('#nav-centrifugas').addClass('active');
 </script>
 
-{{-- To save the generated export files on client side, include in your html code: --}}
-<script type="text/javascript" src="{{ asset('libs/FileSaver/FileSaver.min.js')}}"></script>
-{{-- To export the table as a PDF file the following includes are required: --}}
-<script type="text/javascript" src="{{ asset('libs/jsPDF/jspdf.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('libs/jsPDF-AutoTable/jspdf.plugin.autotable.js')}}"></script>
-{{-- Regardless of the desired format, finally include: --}}
-<script type="text/javascript" src="{{ asset('js/tableExport.min.js')}}"></script>
+
+<script type="text/javascript" src="<?php echo e(asset('libs/FileSaver/FileSaver.min.js')); ?>"></script>
+
+<script type="text/javascript" src="<?php echo e(asset('libs/jsPDF/jspdf.min.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(asset('libs/jsPDF-AutoTable/jspdf.plugin.autotable.js')); ?>"></script>
+
+<script type="text/javascript" src="<?php echo e(asset('js/tableExport.min.js')); ?>"></script>
 
 </html>

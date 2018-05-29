@@ -67,8 +67,8 @@ function paintdatosActuales (datosActuales) {
   $('#digestor').text(datosActuales[0]['digestor']+'cm');
   $('#tolva_recepcion').text(datosActuales[0]['tolva_recepcion']);
   $('#gas').text(datosActuales[0]['gas']);
-  $('#linea_a').text(datosActuales[0]['linea_a']);
-  $('#linea_b').text(datosActuales[0]['linea_a']);
+  $('#linea_a').append(datosActuales[0]['linea_a']);
+  $('#linea_b').append(datosActuales[0]['linea_b']);
   $('#centrifuga_a').append (datosActuales[0]['centrifuga_a']);
   $('#centrifuga_b').append(datosActuales[0]['centrifuga_b']);
   $('#centrifuga_c').append(datosActuales[0]['centrifuga_c']);
