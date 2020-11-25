@@ -8,6 +8,7 @@
                 <div class="panel-heading">Reset Password</div>
 
                 <div class="panel-body">
+				
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -18,7 +19,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label">Direccion de correo</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -27,7 +28,10 @@
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
+									
                                 @endif
+
+								
                             </div>
                         </div>
 
@@ -151,15 +155,18 @@
 									</div>
 
 									<div class="card-content">
-										<div class="flash-message">
-										    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-										      @if(Session::has('alert-' . $msg))
-
-										      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
-										      @endif
-										    @endforeach
-										  </div> <!-- end .flash-message -->
-
+										
+											@if (session('status'))
+											<div class="container">
+											<div class="row">
+												<div class="col-md-12 ">
+												<div class="alert alert-success">
+													{{session('status')}}
+												</div>
+												</div>
+											</div>
+											</div>
+											@endif
 										<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 											<label for="email" class="col-md-4 control-label">Correo Electrónico</label>
 

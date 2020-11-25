@@ -33,7 +33,7 @@
 
                         @can ('marcha_centrifugas.create')
                         <a href="{{route('marcha_centrifugas.create')}}" class="btn btn-primary pull-right">
-                                                  Crear
+                        Marcha/Paro centrifuga
                                                 </a>
                         @endcan
 
@@ -56,14 +56,23 @@
                             @foreach ($marcha_centrifugas as $marcha_centrifuga)
                             <tr>
 
-
+                            
+       
+    
                               <td>
                                 @isset($marcha_centrifuga->user->name){{$marcha_centrifuga->user->name}}
                                   @endisset</td>
                                     <td>{{$marcha_centrifuga->centrifuga}}</td>
                                     <td>{{Carbon\Carbon::parse($marcha_centrifuga->fecha)->format('d-m-Y')}}</td>
                                     <td>{{$marcha_centrifuga->hora}}</td>
-                                    <td>{{$marcha_centrifuga->estado}}</td>
+
+
+                                    @if ($marcha_centrifuga->estado == "En Marcha")
+                                    <td style="background-color:green">{{$marcha_centrifuga->estado}}</td>
+                                    @else
+                                    <td style="background-color:red">{{$marcha_centrifuga->estado}}</td>
+                                    @endif
+                                    
                                     <td>{{$marcha_centrifuga->incidencias}}</td>
 
 

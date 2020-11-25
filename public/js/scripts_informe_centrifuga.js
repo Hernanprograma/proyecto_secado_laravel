@@ -7,21 +7,23 @@ var fechafin;
 var fechainitoquery=$('#fechaini').val();
 var fechafintoquery=$('#fechafin').val();
 
-$('#tipo-informe').on("change", function(){
 
 
-var informe=$('#tipo-informe').val();
 
+ function informe(){
+  var informe=$('#tipo-informe').val();
+  
+ 
   if (informe=="excel"){
       showNotification('top','left','Vas a generar un iforme en formato CSV; ten paciencia');
-    $('#bootstrap-table').tableExport({type:'csv'});
+    $('#bootstrap-table').tableExport({type:'excel'});
   }
 
 if (informe=="pdf"){
   showNotification('top','left','Vas a generar un iforme en formato PDF; ten paciencia');
   $('#bootstrap-table').tableExport({type:'pdf',
                            jspdf: {orientation: 'l',
-                                   format: 'a3',
+                                   format: 'a4',
                                    margins: {left:10, right:10, top:20, bottom:20},
                                    autotable: {styles: {fillColor: 'inherit',
                                                         textColor: 'inherit'},
@@ -30,10 +32,10 @@ if (informe=="pdf"){
                           });
                         }
 
+    
+                        
 
-
-
-});
+};
 
 
 type = ['','info','success','warning','danger'];
@@ -139,7 +141,7 @@ $().ready(function(){
     searchAlign: 'left',
     pageSize: 15,
     clickToSelect: false,
-    pageList: [8,10,25,50,100],
+    pageList: [8,10,25,50,100,1000],
 
     formatShowingRows: function(pageFrom, pageTo, totalRows){
       //do nothing here, we don't want to show the text "showing x of y from..."

@@ -35,7 +35,7 @@
                         <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
                         @can ('centrifugas.create')
                         <a href="{{route('centrifugas.create')}}" class="btn btn-primary pull-right">
-                                                  Crear
+                                                  Nueva muestra centrifuga
                                                 </a>
                         @endcan
 

@@ -27,6 +27,95 @@ Tip 2: you can change the color of the active button using the data-active-color
       @endcan
 
 
+      <li id="nav-lecturas_secado">
+        <a data-toggle="collapse" href="#lecturas_secado">
+                      <i class="ti-ruler-pencil"></i>
+                      <p>
+            Lecturas secado
+                         <b class="caret"></b>
+                      </p>
+                  </a>
+        <div class="collapse" id="lecturas_secado">
+          <ul class="nav">
+
+
+            @can ('linea_muestras.index')
+            <li id="nav-linea_muestras">
+              <a href="{{route('linea_muestras.index')}}">
+                <span class="sidebar-mini">Lin</span>
+                <span class="sidebar-normal">Muestras de linea</span>
+                  </a>
+            </li>
+            @endcan
+
+            @can ('centrifugas.index')
+            <li id="nav-cent">
+              <a href="{{route('centrifugas.index')}}">
+                <span class="sidebar-mini">Cen</span>
+                <span class="sidebar-normal">Centrífugas</span>
+
+                  </a>
+            </li>
+            @endcan
+            @can ('poli_marcas.index')
+            <li id="nav-poli">
+              <a href="{{route('poli_marcas.index')}}">
+                <span class="sidebar-mini">Mar</span>
+                <span class="sidebar-normal">Marcas de poli</span>
+                  </a>
+            </li>
+            @endcan
+
+            @can ('simbioticas.index')
+            <li id="nav-simbio">
+              <a href="{{route('simbioticas.index')}}">
+                <span class="sidebar-mini">Sim</span>
+                <span class="sidebar-normal">Simbiotica</span>
+                  </a>
+            </li>
+            @endcan
+
+            @can ('linea_datos.index')
+            <li id="nav-linea_datos">
+              <a href="{{route('linea_datos.index')}}">
+                <span class="sidebar-mini">Dat</span>
+                <span class="sidebar-normal">Datos de la linea</span>
+                  </a>
+            </li>
+            @endcan
+
+            @can ('marcha_centrifugas.index')
+            <li id="nav-marcha_centrifugas">
+              <a href="{{route('marcha_centrifugas.index')}}">
+                <span class="sidebar-mini">Mc</span>
+                <span class="sidebar-normal">Marcha Paro Centrífugas</span>
+                  </a>
+            </li>
+            @endcan
+
+            @can ('gasto_polis.index')
+            <li id="nav-gasto_polis">
+              <a href="{{route('gasto_polis.index')}}">
+                <span class="sidebar-mini">Gp</span>
+                <span class="sidebar-normal">Gasto de Polielectrolito</span>
+                  </a>
+            </li>
+            @endcan
+
+          </ul>
+        </div>
+      </li>
+
+      @can ('turnos.index')
+      <li id="nav-turnos">
+        <a href="{{route('turnos.index')}}">
+              <i class="ti-calendar"></i>
+              <p>Turnos secado</p>
+            </a>
+      </li>
+      @endcan
+
+
       <li id="nav-informes">
         <a data-toggle="collapse" href="#informes">
                       <i class="ti-map"></i>
@@ -121,95 +210,11 @@ Tip 2: you can change the color of the active button using the data-active-color
 
 
 
-      @can ('turnos.index')
-      <li id="nav-turnos">
-        <a href="{{route('turnos.index')}}">
-              <i class="ti-calendar"></i>
-              <p>Turnos secado</p>
-            </a>
-      </li>
-      @endcan
+     
 
 
 
-      <li id="nav-lecturas_secado">
-        <a data-toggle="collapse" href="#lecturas_secado">
-                      <i class="ti-ruler-pencil"></i>
-                      <p>
-            Lecturas secado
-                         <b class="caret"></b>
-                      </p>
-                  </a>
-        <div class="collapse" id="lecturas_secado">
-          <ul class="nav">
-
-
-            @can ('linea_muestras.index')
-            <li id="nav-linea_muestras">
-              <a href="{{route('linea_muestras.index')}}">
-                <span class="sidebar-mini">Lin</span>
-                <span class="sidebar-normal">Muestras de linea</span>
-                  </a>
-            </li>
-            @endcan
-
-            @can ('centrifugas.index')
-            <li id="nav-cent">
-              <a href="{{route('centrifugas.index')}}">
-                <span class="sidebar-mini">Cen</span>
-                <span class="sidebar-normal">Centrífugas</span>
-
-                  </a>
-            </li>
-            @endcan
-            @can ('poli_marcas.index')
-            <li id="nav-poli">
-              <a href="{{route('poli_marcas.index')}}">
-                <span class="sidebar-mini">Mar</span>
-                <span class="sidebar-normal">Marcas de poli</span>
-                  </a>
-            </li>
-            @endcan
-
-            @can ('simbioticas.index')
-            <li id="nav-simbio">
-              <a href="{{route('simbioticas.index')}}">
-                <span class="sidebar-mini">Sim</span>
-                <span class="sidebar-normal">Simbiotica</span>
-                  </a>
-            </li>
-            @endcan
-
-            @can ('linea_datos.index')
-            <li id="nav-linea_datos">
-              <a href="{{route('linea_datos.index')}}">
-                <span class="sidebar-mini">Dat</span>
-                <span class="sidebar-normal">Datos de la linea</span>
-                  </a>
-            </li>
-            @endcan
-
-            @can ('marcha_centrifugas.index')
-            <li id="nav-marcha_centrifugas">
-              <a href="{{route('marcha_centrifugas.index')}}">
-                <span class="sidebar-mini">Mc</span>
-                <span class="sidebar-normal">Marcha Paro Centrífugas</span>
-                  </a>
-            </li>
-            @endcan
-
-            @can ('gasto_polis.index')
-            <li id="nav-gasto_polis">
-              <a href="{{route('gasto_polis.index')}}">
-                <span class="sidebar-mini">Gp</span>
-                <span class="sidebar-normal">Gasto de Polielectrolito</span>
-                  </a>
-            </li>
-            @endcan
-
-          </ul>
-        </div>
-      </li>
+      
 
 
     </ul>

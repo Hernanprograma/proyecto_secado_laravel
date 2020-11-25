@@ -36,7 +36,7 @@
                       <a class="btn btn-info" href="{{ URL::previous() }}">Volver</a>
                     </div>
 
-
+                        </div>
 
 
                       <div class="form-group col-md-3 col-xs-12">
@@ -51,16 +51,20 @@
                       </div>
 
                       <div class="form-group col-md-2 col-xs-12">
-                        <input type="button" value="Mostrar datos  " class="btn btn-info btn-block" onclick="getDatos()">
+                        <input type="button" value="Mostrar datos" class="btn btn-info btn-block" onclick="getDatos()">
                       </div>
-                      <div class="form-group col-md-2 col-xs-12">
+                      <div class="form-group col-md-2 col-xs-6">
 
-                        <select id="tipo-informe" class="selectpicker" name="tipo-reporte" data-style="btn btn-warning btn-block" title="Tipo de informe" data-size="3">
-                          <option value="excel">Excel</option>
-                          <option value="pdf">PDF</option>
+                        <select id="tipo-informe"  class="selectpicker" name="tipo-reporte" data-style="btn btn-warning btn-block" data-size="3">
+                          <option value="excel" id="ex">Excel</option>
+                          <option value="pdf" id="pd">PDF</option>
 
                         </select>
                       </div>
+                        <div class="form-group col-md-2 col-xs-6">
+                        <input type="button" value="Informe" class="btn btn-info btn-block" onclick="informe()">
+                        </div>
+                      
 
 
 

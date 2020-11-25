@@ -36,7 +36,7 @@
 
                                         @can ('gasto_polis.create')
                                         <a href="{{route('gasto_polis.create')}}" class="btn btn-primary pull-right">
-                                                  Crear
+                                                  Nuevo saco
                                                 </a>
                                         @endcan
 

@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Poli_marca;
 use Illuminate\Http\Request;
+use Auth;
 
 class PoliMarcaController extends Controller
 {
@@ -35,9 +36,9 @@ class PoliMarcaController extends Controller
     {
         $poli_marca=new Poli_marca($request->all());
         $poli_marca->user_id = Auth::user()->id;
-        $simbiotica->save();
+        $poli_marca->save();
 
-        $poli_marca=Poli_marca::create($request->all());
+        //$poli_marca=Poli_marca::create($request->all());
         return redirect()->route('poli_marcas.index', $poli_marca->id)
         ->with('info', 'Marca Creada con éxito');
     }
